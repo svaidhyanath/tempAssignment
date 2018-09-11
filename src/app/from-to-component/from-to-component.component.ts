@@ -20,6 +20,9 @@ export class FromToComponentComponent implements OnInit {
   constructor(private service: SharedAppServicesService) { }
 
   ngOnInit() {
+    this.getUserDetail();
+    this.getFromAccountsInfo();
+    this.getToAccountsInfo();
   }
 
   getUserDetail(): void {

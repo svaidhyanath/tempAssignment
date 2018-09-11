@@ -1,3 +1,12 @@
-<p>
-  from-to-component works!
-</p>
+<h3>
+  Hello, {{user.name}}!
+</h3>
+<h4>From Choices:</h4>
+<div *ngFor="let choice of fromAccountChoices">
+  <p>Account Type:: {{choice.accountType}}     Name :: {{choice.accountName}}</p>
+</div>
+<br>
+<h4>To Choices:</h4>
+<div *ngFor="let choice of toAccountChoices">
+  <p>Account Type:: {{choice.accountType}}     Name :: {{choice.accountName}}</p>
+</div>

@@ -18,17 +18,17 @@ export class SharedAppServicesService {
   constructor() { }
 
   getUserDetails(): Observable<MockUserObject> {
-    console.log('Get User Service response: ', MOCK_SAMPLE_USER);
+    // console.log('Get User Service response: ', MOCK_SAMPLE_USER);
     return of(MOCK_SAMPLE_USER);
   }
 
   getFromAccountsOfUser(): Observable<MockFromAccountsModel[]> {
-    console.log('Get From Accounts Service response: ', MOCK_FROM_ACCOUNTS_ARRAY);
+    // console.log('Get From Accounts Service response: ', MOCK_FROM_ACCOUNTS_ARRAY);
     return of(MOCK_FROM_ACCOUNTS_ARRAY);
   }
 
   getToAccountsOfUser(): Observable<MockToAccountsModel[]> {
-    console.log('Get To Accounts Service response: ', MOCK_TO_ACCOUNTS_ARRAY);
+    // console.log('Get To Accounts Service response: ', MOCK_TO_ACCOUNTS_ARRAY);
     return of(MOCK_TO_ACCOUNTS_ARRAY);
   }
 
