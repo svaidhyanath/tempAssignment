@@ -23,16 +23,22 @@ export class FromToComponentComponent implements OnInit {
 
   ngOnInit() {
     this.service.setAppModel('enteredAmount', 0);
-    this.allInputsAnswered = false;
+    this.allInputsAnswered = true;
     this.getUserDetail();
     this.getFromAccountsInfo();
     this.getToAccountsInfo();
     console.log(this.service.getAppModel());
   }
 
-  /* ngDoCheck() {
-
-  } */
+  ngDoCheck(): void {
+    if ( Number(this.service.getAppModel().enteredAmount) > 0
+    && typeof this.service.getAppModel().fromAccount === 'object'
+    && typeof this.service.getAppModel().toAccount === 'object') {
+      this.allInputsAnswered = true;
+    } else {
+      this.allInputsAnswered = false;
+    }
+  }
 
   getUserDetail(): void {
     this.service.getUserDetails()
@@ -59,6 +65,10 @@ export class FromToComponentComponent implements OnInit {
     toAccount.isSelected = true;
     // set the isSelected attribute on other choices as false
     this.service.setAppModel('toAccount', toAccount);
+  }
+
+  onInputValueChanged(): void {
+    this.service.setAppModel('enteredAmount', this.enteredAmountValue);
   }
 
   buttonClicked(): void {

@@ -19,7 +19,7 @@ export class SharedAppServicesService {
     user : MockUserObject,
     fromAccount : MockFromAccountsModel,
     toAccount : MockToAccountsModel,
-    enteredAmount: Number
+    enteredAmount: String
   };
 
   constructor() { }

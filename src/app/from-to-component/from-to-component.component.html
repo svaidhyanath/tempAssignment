@@ -17,7 +17,7 @@
     <div style="height:10px;width: 100%"></div>
     <div class="fromToHeader">Amount to send</div>
     <div class="fromToOptions">
-        <input type="number" class="form-control" placeholder="$0.00" [(ngModel)]="this.enteredAmountValue">
+        <input type="number" class="form-control" placeholder="$0.00" [(ngModel)]="this.enteredAmountValue" (change)="onInputValueChanged()">
     </div>
     <div style="height:10px;width: 100%"></div>
     <button type="button" class="btn btn-default btn-lg" (click)="buttonClicked()"[disabled]="!this.allInputsAnswered">Next</button>
