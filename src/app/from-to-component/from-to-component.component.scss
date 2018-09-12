@@ -1,0 +1,26 @@
+.container{
+    margin-top: 10%;
+}
+.form-margin{
+margin-left: 15%;
+}
+
+.form-control{
+    width: 70%;
+}
+.btn{
+    margin-top: 10%;
+    width: 40%; 
+}
+.text-color{
+    color: white;
+}
+.btn{
+    background-color: #b5985a;
+    color: white; 
+}
+@media (max-width: 500px){
+.container{
+    margin-top: 20%;
+}
+}

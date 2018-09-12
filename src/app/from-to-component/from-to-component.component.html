@@ -1,4 +1,4 @@
-<h3>
+<!-- <h3>
   Hello, {{user.name}}!
 </h3>
 <h4>From Choices:</h4>
@@ -10,4 +10,39 @@
 <div *ngFor="let choice of toAccountChoices" (click)='onSelectToAccount(choice)'>
   <p>Account Type:: {{choice.accountType}}  <<=>>   Name :: {{choice.accountName}}</p>
 </div>
-<button  (click)="buttonClicked()">Click Me!</button>
+<button  (click)="buttonClicked()">Click Me!</button> -->
+
+<div class="container">
+    <div class="row form-margin">
+      <div class="col-lg">
+        <div>
+          <h2 class="text-color"> Hello Vineela </h2>
+        </div>
+        <div>
+          <h3 style="text-align:left" class="text-color"> Send Money</h3>
+        </div>
+        <h4 class="text-color">From:</h4>
+        <select class="form-control">
+          <option></option>
+          <option>Checkings</option>
+          <option>Savings</option>
+          <option>Credit Cards</option>
+        </select>
+        <br>
+    
+        <h4 class="text-color">To:</h4>
+        <select class="form-control">
+          <option></option>
+          <option>Checkings</option>
+          <option>Savings</option>
+          <option>Credit Card</option>
+        </select>
+        <br>
+    
+        <h4 class="text-color">Amount:</h4>
+        <input type="number" class="form-control">
+        <br>
+        <button type="button" class="btn btn-default btn-lg">Next</button>
+      </div>
+    </div>
+    </div>

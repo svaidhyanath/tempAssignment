@@ -9,7 +9,7 @@ import {SharedAppServicesService} from '../services/shared-app-services.service'
 @Component({
   selector: 'app-from-to-component',
   templateUrl: './from-to-component.component.html',
-  styleUrls: ['./from-to-component.component.css']
+  styleUrls: ['./from-to-component.component.scss']
 })
 export class FromToComponentComponent implements OnInit {
 

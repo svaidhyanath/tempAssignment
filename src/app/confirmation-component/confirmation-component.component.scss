@@ -21,6 +21,7 @@
 }
 .check-margin-text h3{
     color: white;
+    padding-left: 32px;
 }
 .check-margin-logo{
     margin-left: 40%;
@@ -45,4 +46,16 @@
 .button-margin .btn-outline-primary{
     border-color: #b5985a;
     color: white;
+}
+@media (max-width: 500px){
+    .container{
+        margin-top:25%;
+        margin-left: -7%;
+    }
+    .button-margin {
+        margin-left: 12%;
+    }
+    .button-margin .btn {
+        width: 45%;
+    }
 }

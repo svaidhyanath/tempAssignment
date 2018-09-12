@@ -1,0 +1,25 @@
+.container{
+    margin-top: 15%;
+}
+.form-login{
+    font-size:40px;
+    text-align: center;
+}
+.btn{
+    width: 25%; 
+    background-color: #b5985a;
+    color: white;
+}
+.text-color{
+    color: white;
+}
+@media (max-width: 500px){
+.container{
+    margin-top: 50%;
+    margin-left: 5%;
+}
+.btn{
+    width: 40%;
+    margin-left: -10%;
+}
+}
