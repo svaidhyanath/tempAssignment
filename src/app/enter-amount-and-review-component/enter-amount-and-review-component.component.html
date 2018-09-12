@@ -1,11 +1,22 @@
+<div class="userGreet">
+  <span>Hello, {{user.name}}!</span>
+  <hr class="partialUnderline">
+  <span style="font-size: 16px;">Review transaction</span>
+</div>
 <div class="container">
-<div class="row form-login">
-    <div class="col">
-        <h1 class="text-color">
-          You are Sending $250 from one account to the another account
-        </h1>
-      <br>
-      <button type="button" class="btn btn-default btn-lg">Accept</button>
-    </div>
+  <div class="reviewText">
+    <span style="display: block; width:100%;">You are sending, </span>
+    <span style="display: block; width:100%;"><b>$250.00 </b></span>
+    <span style="display: block; width:100%;">from <b>Savings</b> account: </span>
+    <span style="display: block; width:100%;"><b>987654321 - Mock Savings Account</b></span>
+    <span>to <b>Lender</b> account : </span>
+    <span style="display: block; width:100%;"><b>9999999990 - Repay Credit Card</b></span>
+    <div style="height:20px;width: 100%"></div>
+    <button type="button" class="editBtn">Edit</button>
+  </div>
+  <div class="btnSection">
+    <button type="button" class="acceptCancelBtn btn-default btn-lg" style="float: left;background-color: #6d541d;">Accept</button>
+    <div class="inBetweenSpace"></div>
+    <button type="button" class="acceptCancelBtn btn-default btn-lg" style="float: right;background-color: #ee5509f4;">Cancel</button>
   </div>
 </div>

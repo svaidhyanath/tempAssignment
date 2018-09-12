@@ -1,25 +1,76 @@
-.container{
-    margin-top: 15%;
+.userGreet {
+  background-color: #000;
+  width: 100%;
+  height: 90px;
+  margin: 0 auto;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 17px;
+  letter-spacing: 0.4px;
+  text-align: center;
+  color: #fff;
+  padding: 10px;
 }
-.form-login{
-    font-size:40px;
-    text-align: center;
+.partialUnderline {
+  width: 80%;
+  margin: 10px auto 10px;
+  color: #fff;
+  border: 1px solid;
 }
-.btn{
-    width: 25%; 
-    background-color: #b5985a;
-    color: white;
+.reviewText {
+  min-height: 250px;
+  padding: 40px 10px;
+  margin: 20px auto;
+  text-align: center;
+  border: 1px solid #b5985a;
+  border-radius: 3px;
+  letter-spacing: 0.4px;
+  font-size: 17px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
-.text-color{
-    color: white;
+.editBtn {
+  width: 25%;
+  background-color: #b5985a;
+  color: #302713;
+  font-weight: bold;
+  border-radius: 4px;
 }
-@media (max-width: 500px){
-.container{
+.btnSection {
+  width:100%;
+  margin: 40px auto;
+  height: 70px;
+}
+.acceptCancelBtn {
+  width: 40%;
+  box-sizing: border-box;
+}
+
+.text-color {
+  color: white;
+}
+
+@media (max-width: 500px) {
+  /* .container{
     margin-top: 50%;
     margin-left: 5%;
 }
 .btn{
     width: 40%;
     margin-left: -10%;
+}*/
 }
+
+/* .btn {
+  width: 100%;
+  color:#302713;
+  font-weight: bold;
+  background-color: #b5985a;
 }
+.btn:hover {
+  background-color: #d8a330;
+}
+.btn:active {
+  background-color: #6d541d;
+  color: #fff;
+} */

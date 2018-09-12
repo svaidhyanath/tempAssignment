@@ -29,7 +29,7 @@ export class FromToComponentComponent implements OnInit {
     this.getToAccountsInfo();
     console.log(this.service.getAppModel());
   }
-
+/*
   ngDoCheck(): void {
     if ( Number(this.service.getAppModel().enteredAmount) > 0
     && typeof this.service.getAppModel().fromAccount === 'object'
@@ -39,7 +39,7 @@ export class FromToComponentComponent implements OnInit {
       this.allInputsAnswered = false;
     }
   }
-
+ */
   getUserDetail(): void {
     this.service.getUserDetails()
         .subscribe(user => this.user = user);
