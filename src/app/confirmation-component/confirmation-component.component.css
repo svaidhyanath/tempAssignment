@@ -1,0 +1,48 @@
+
+
+.success-check{
+    height: 100px;
+    width: 100px;
+}
+.check-margin{
+    margin-left: 40%;
+    margin-top: 5%;
+}
+.check-margin-number{
+    margin-left: 38%;
+    margin-top: 5%;
+}
+.check-margin-number h1{
+    color: white;
+}
+.check-margin-text{
+    margin-top: 5%;
+    margin-left: 15%;
+}
+.check-margin-text h3{
+    color: white;
+}
+.check-margin-logo{
+    margin-left: 40%;
+    margin-top: 5%;
+}
+.logo{
+    height: 70px;
+    width: 100px;
+}
+.button-margin{
+    margin-left: 28%;
+}
+.button-margin .btn{
+    margin-right: 10px;
+    margin-top: 5%;
+    width: 25%;
+}
+.button-margin .btn-default{
+    background-color: #b5985a;
+    color: white;
+}
+.button-margin .btn-outline-primary{
+    border-color: #b5985a;
+    color: white;
+}
