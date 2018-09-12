@@ -20,6 +20,7 @@ export class FromToComponentComponent implements OnInit {
   constructor(private service: SharedAppServicesService) { }
 
   ngOnInit() {
+    this.service.setAppModel('enteredAmount', 0);
     this.getUserDetail();
     this.getFromAccountsInfo();
     this.getToAccountsInfo();
@@ -38,6 +39,18 @@ export class FromToComponentComponent implements OnInit {
   getToAccountsInfo(): void {
     this.service.getToAccountsOfUser()
         .subscribe(toAccountChoices => this.toAccountChoices = toAccountChoices);
+  }
+
+  onSelectFromAccount(fromAccount: MockFromAccountsModel): void {
+    this.service.setAppModel('fromAccount', fromAccount);
+  }
+
+  onSelectToAccount(toAccount: MockToAccountsModel): void {
+    this.service.setAppModel('toAccount', toAccount);
+  }
+
+  buttonClicked(): void {
+    console.log('Getting the saved appModel: ', this.service.getAppModel());
   }
 
 }

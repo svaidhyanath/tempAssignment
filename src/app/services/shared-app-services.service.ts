@@ -15,21 +15,34 @@ import {MOCK_TO_ACCOUNTS_ARRAY} from '../mockData/toAccountsArray';
 })
 export class SharedAppServicesService {
 
+  appModel = {
+    user : MockUserObject,
+    fromAccount : MockFromAccountsModel,
+    toAccount : MockToAccountsModel,
+    enteredAmount: Number
+  };
+
   constructor() { }
 
   getUserDetails(): Observable<MockUserObject> {
-    // console.log('Get User Service response: ', MOCK_SAMPLE_USER);
+    this.setAppModel('user', MOCK_SAMPLE_USER);
     return of(MOCK_SAMPLE_USER);
   }
 
   getFromAccountsOfUser(): Observable<MockFromAccountsModel[]> {
-    // console.log('Get From Accounts Service response: ', MOCK_FROM_ACCOUNTS_ARRAY);
     return of(MOCK_FROM_ACCOUNTS_ARRAY);
   }
 
   getToAccountsOfUser(): Observable<MockToAccountsModel[]> {
-    // console.log('Get To Accounts Service response: ', MOCK_TO_ACCOUNTS_ARRAY);
     return of(MOCK_TO_ACCOUNTS_ARRAY);
+  }
+
+  setAppModel(name, value) {
+    this.appModel[name] = value;
+  }
+
+  getAppModel() {
+    return this.appModel;
   }
 
 }
