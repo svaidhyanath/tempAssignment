@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 import { MockUserObject } from '../models/mock-user-object';
 import { MockFromAccountsModel } from '../models/mock-from-accounts-model';
@@ -16,15 +16,23 @@ export class FromToComponentComponent implements OnInit {
   user: MockUserObject;
   fromAccountChoices: MockFromAccountsModel[];
   toAccountChoices: MockToAccountsModel[];
+  @Input() enteredAmountValue: Number;
+  allInputsAnswered: Boolean;
 
   constructor(private service: SharedAppServicesService) { }
 
   ngOnInit() {
     this.service.setAppModel('enteredAmount', 0);
+    this.allInputsAnswered = false;
     this.getUserDetail();
     this.getFromAccountsInfo();
     this.getToAccountsInfo();
+    console.log(this.service.getAppModel());
   }
+
+  /* ngDoCheck() {
+
+  } */
 
   getUserDetail(): void {
     this.service.getUserDetails()
@@ -42,10 +50,14 @@ export class FromToComponentComponent implements OnInit {
   }
 
   onSelectFromAccount(fromAccount: MockFromAccountsModel): void {
+    fromAccount.isSelected = true;
+    // set the isSelected attribute on other choices as false
     this.service.setAppModel('fromAccount', fromAccount);
   }
 
   onSelectToAccount(toAccount: MockToAccountsModel): void {
+    toAccount.isSelected = true;
+    // set the isSelected attribute on other choices as false
     this.service.setAppModel('toAccount', toAccount);
   }
 

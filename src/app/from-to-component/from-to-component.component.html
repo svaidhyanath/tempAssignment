@@ -1,47 +1,25 @@
-<!-- <h3>
-  Hello, {{user.name}}!
-</h3>
-<h4>From Choices:</h4>
-<div *ngFor="let choice of fromAccountChoices" (click)='onSelectFromAccount(choice)'>
-  <p>Account Type:: {{choice.accountType}}  <<=>>   Name :: {{choice.accountName}}</p>
-</div>
-<br>
-<h4>To Choices:</h4>
-<div *ngFor="let choice of toAccountChoices" (click)='onSelectToAccount(choice)'>
-  <p>Account Type:: {{choice.accountType}}  <<=>>   Name :: {{choice.accountName}}</p>
-</div>
-<button  (click)="buttonClicked()">Click Me!</button> -->
-
 <div class="userGreet">
   <span>Hello, {{user.name}}!</span>
   <hr class="partialUnderline">
-  <div class="userGreet" style="font-size: 16px;"><span>Send money</span></div>
+  <span style="font-size: 16px;">Send money</span>
 </div>
 <div class="container">
-  <div class="row form-margin">
-    <div class="col-lg">
-      <h4 class="text-color">From:</h4>
-      <select class="form-control">
-        <option></option>
-        <option>Checkings</option>
-        <option>Savings</option>
-        <option>Credit Cards</option>
-      </select>
-      <br>
-
-      <h4 class="text-color">To:</h4>
-      <select class="form-control">
-        <option></option>
-        <option>Checkings</option>
-        <option>Savings</option>
-        <option>Credit Card</option>
-      </select>
-      <br>
-
-      <h4 class="text-color">Amount:</h4>
-      <input type="number" class="form-control">
-      <br>
-      <button type="button" class="btn btn-default btn-lg">Next</button>
+  <div class="fromToComponentContent">
+    <div class="fromToHeader">From Account</div>
+    <div class="fromToOptions" *ngFor="let choice of fromAccountChoices" (click)='onSelectFromAccount(choice)'>
+      <span>{{choice.accountType}}</span> account named <span>{{choice.accountName}}</span>
     </div>
+    <div style="height:10px;width: 100%"></div>
+    <div class="fromToHeader">From Account</div>
+    <div class="fromToOptions" *ngFor="let choice of toAccountChoices" (click)='onSelectFromAccount(choice)'>
+      <span>{{choice.accountType}}</span> account named <span>{{choice.accountName}}</span>
+    </div>
+    <div style="height:10px;width: 100%"></div>
+    <div class="fromToHeader">Amount to send</div>
+    <div class="fromToOptions">
+        <input type="number" class="form-control" placeholder="$0.00" [(ngModel)]="this.enteredAmountValue">
+    </div>
+    <div style="height:10px;width: 100%"></div>
+    <button type="button" class="btn btn-default btn-lg" (click)="buttonClicked()"[disabled]="!this.allInputsAnswered">Next</button>
   </div>
 </div>
