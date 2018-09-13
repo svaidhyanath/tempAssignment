@@ -1,5 +1,5 @@
 .userGreet {
-  background-color: #000;
+  // background-color: #000;
   width: 100%;
   height: 90px;
   margin: 0 auto;
@@ -8,13 +8,13 @@
   font-size: 17px;
   letter-spacing: 0.4px;
   text-align: center;
-  color: #fff;
+  color: #302713;
   padding: 10px;
 }
 .partialUnderline {
   width: 80%;
   margin: 10px auto 10px;
-  color: #fff;
+  color: #302713;
   border: 1px solid;
 }
 .reviewText {
@@ -52,7 +52,7 @@
 a{
     color: white;
     text-decoration: none;
-    background-color: transparent;    
+    background-color: transparent;
 }
 
 @media (max-width: 500px) {
