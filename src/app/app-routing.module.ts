@@ -12,15 +12,11 @@ import { PayeePageComponent } from './payee-page/payee-page.component';
 //
 
 const routes: Routes = [
-  /* {path: '', component: FromToComponentComponent }, */ // old application landing page
-  {path: 'enter-amount-and-review-component', component: EnterAmountAndReviewComponentComponent},
-  {path: 'from-to-component', component: FromToComponentComponent},
-  {path: 'confirmation-component', component: ConfirmationComponentComponent},
-  // part of the new application
   {path: '', component: HomePageComponent },
   {path: 'home', component: HomePageComponent},
-  {path: 'payee-list', component: PayeePageComponent}
-  //
+  {path: 'payee-list', component: PayeePageComponent},
+  {path: 'from-amount', component: EnterAmountAndReviewComponentComponent},
+  {path: 'confirmation', component: ConfirmationComponentComponent}
 ];
 
 @NgModule({

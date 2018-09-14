@@ -3,4 +3,5 @@ export class MockToAccountsModel  {
   accountNumber: String;
   accountName: String;
   isSelected: Boolean;
+  amountBal: String;
 }

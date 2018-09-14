@@ -4,19 +4,36 @@ export const MOCK_TO_ACCOUNTS_ARRAY:  MockToAccountsModel[] = [
   {
     accountType:  'Payee',
     accountNumber:  '4545454545',
-    accountName:  'Send Money to Friend',
+    accountName:  'Shane Beiber',
+    amountBal: '214.59',
     isSelected:  false
   },
   {
-    accountType:  'Lender',
+    accountType:  'Payee',
     accountNumber:  '9999999990',
-    accountName:  'Repay Credit Card',
+    accountName:  'Alex Jones',
+    amountBal: '1234.56',
     isSelected:  false
   },
   {
-    accountType:  'Private',
+    accountType:  'Payee',
     accountNumber:  '1357986420',
-    accountName:  'Something else that I send my money to',
+    accountName:  'Baker Mayfield',
+    amountBal: '98.76',
+    isSelected:  false
+  },
+  {
+    accountType:  'Payee',
+    accountNumber:  '1357986420',
+    accountName:  'Bing Zhang',
+    amountBal: '6264.69',
+    isSelected:  false
+  },
+  {
+    accountType:  'Payee',
+    accountNumber:  '1357986420',
+    accountName:  'Theo Riddick',
+    amountBal: '33214.99',
     isSelected:  false
   }
 ];
