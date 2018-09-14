@@ -4,13 +4,13 @@
 
   <div style="height:45px;">
     <div class="backChevron">
-      <i class="fas fa-chevron-left"></i>
+      <a routerLink="/home"><i class="fas fa-chevron-left"></i></a>
     </div>
     <div class="sendMoney">
       Send Money
     </div>
     <div class="cancel">
-      Cancel
+        <a routerLink="">Cancel</a>
     </div>
   </div>
 
@@ -57,7 +57,7 @@
 <div class="container" style="height: 450px;">
     <div class="fromToComponentContent">
         <div class="fromToHeader">Payee</div>
-        <div class="fromToOptions" *ngFor="let choice of fromAccountChoices" (click)='onSelectFromAccount(choice)'>
+        <div class="fromToOptions" *ngFor="let choice of toAccountChoices" (click)='onSelectToAccount(choice)'>
           <!-- <span>{{choice.accountType}}</span> account named <span>{{choice.accountName}}</span> -->
           <div class="accountTypeImage">
             <img src="../../assets/icon_Checking.png" height="32" width="32" >

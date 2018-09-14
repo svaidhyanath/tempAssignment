@@ -15,6 +15,65 @@ import {MOCK_TO_ACCOUNTS_ARRAY} from '../mockData/toAccountsArray';
 })
 export class SharedAppServicesService {
 
+  private MOCK_TO_ACCOUNTS_RESPONSE_FROM_API = {
+    'cfiToken': null,
+    'flowId': null,
+    'nextAllowedStates': null,
+    'type': 'success',
+    'code': '0000',
+    'details': '',
+    'location': '',
+    'moreInfo': '',
+    'message': null,
+    'prefix': null,
+    'cgtPayeeList': {
+       'index': '0',
+       'isGlobalMobileV3App': 'N',
+       'payeeList': [
+          {
+             'canPayNowFlag': 'Y',
+             'citiAccountListId': '1',
+             'citiAccountName': ',man,numb,no',
+             'citiAccountNickName': ',man,numb,no',
+             'payeeStatus': 'ACTIVE',
+             'canEditFlag': 'Y',
+             'canDeleteFlag': 'Y',
+             'canActivateFlag': 'N',
+             'payees': [
+                5
+             ],
+             'domesticRefId': null,
+             'internationalRefId': null,
+             'billPayRefId': null,
+             'domesticNickName': null,
+             'internationalNickName': null,
+             'billPayNickName': null,
+             'p2pRefId': null,
+             'payeeRefId': ',man,numb,no',
+             'lastPaymentAmount': '$10.00',
+             'lastPaymentDate': '09-08-2018',
+             'lastPayment': '$10.00 on 09-08-2018',
+             'lastPaymentAmountDesc': 'Last Payment Amount : ',
+             'lastPaymentDateDesc': 'Last Payment Date : ',
+             'lastPaymentDesc': 'Last Payment: ',
+             'p2pGtpsNickName': null,
+             'elecPayeeFullName': 'EMERGE MASTERCARD/VISA',
+             'showLastPaymentDetails': true,
+             'textIdentifier': 'BP',
+             'unified': false
+          }
+       ],
+       'payeeListCount': '1',
+       'p2pUpdate': null,
+       'token': '1',
+       'p2PUpdateRequired': false
+    },
+    'makePayment': true,
+    'cgtdomesticOn': true,
+    'cgtinternationalOn': true,
+    'addEditPayeeOn': true
+  };
+
   appModel = {
     user : MockUserObject,
     fromAccount : MockFromAccountsModel,
