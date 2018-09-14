@@ -14,43 +14,38 @@
     </div>
   </div>
 
-  <div style="height:200px;width:100%; color: #fff;">
+  <div class="recentPayeeSection" >
 
-    <div style="height:45px;">
-      <div style="height: 35px; width:90%; margin:0 auto; border-bottom:1px solid #fff; padding: 2px 5px;">
-        <i class="fas fa-search"
-          style="width:10%; height:30px; line-height: 30px;
-          font-size: 16px; float:left; text-align: center; vertical-align: bottom;">
-        </i>
-        <input type="text" name="search" placeholder="Enter a name to search"
-          style="width:90%; float:left; background:transparent; border:0; outline:none;
-          text-align: center; font-style:italic; color: #fff;">
+    <div class="payeeSearchBar">
+      <div class="payeeSearchBarInner">
+        <i class="fas fa-search searchIcon"></i>
+        <input class="payeeSearchBarInput" type="text" name="search" placeholder="Enter a name to search">
       </div>
     </div>
 
-    <div style="height:155px;">
-      <div class="row" style="text-align: center; display: block; margin: 0 auto;">Recent Payees</div>
-      <div class="row" style="height: 120px; margin:15px 0; padding: 0 10px;">
+    <div class="recentPayeeImageSection">
+      <div class="row recentPayeeImageSectionHeader">Recent Payees</div>
+      <div class="row recentPayeeImageSectionImages" >
 
-        <div style="height:105px; width: 25%; float:left;">
-          <div style="height:80px; width: 100%;">
+        <div class="payeeDetails">
+          <div class="payeeDetailsImage">
               <img src="../../assets/avatar_Alex-80X80.png" alt="" height="80" width="80" style="display: block; margin:0 auto;">
           </div>
-          <div style="height:25px; text-align: center; font-size: 14px;">Alex</div>
+          <div class="payeeDetailsName">Alex</div>
         </div>
 
-        <div style="height:105px; width: 25%; float:left;">
-            <div style="height:80px; width: 100%;">
+        <div class="payeeDetails">
+            <div class="payeeDetailsImage">
                 <img src="../../assets/shane-80x80.png" alt="" height="80" width="80" style="display: block; margin:0 auto;">
             </div>
-            <div style="height:25px; text-align: center; font-size: 14px;">Shane</div>
+            <div class="payeeDetailsName">Shane</div>
         </div>
 
-        <div style="height:105px; width: 25%; float:left;">
-            <div style="height:80px; width: 100%;">
+        <div class="payeeDetails">
+            <div class="payeeDetailsImage">
                 <img src="../../assets/bing-80x80.png" alt="" height="80" width="80" style="display: block; margin:0 auto;">
             </div>
-            <div style="height:25px; text-align: center; font-size: 14px;">Bing</div>
+            <div class="payeeDetailsName">Bing</div>
         </div>
 
       </div>
@@ -63,7 +58,12 @@
     <div class="fromToComponentContent">
         <div class="fromToHeader">Payee</div>
         <div class="fromToOptions" *ngFor="let choice of fromAccountChoices" (click)='onSelectFromAccount(choice)'>
-          <span>{{choice.accountType}}</span> account named <span>{{choice.accountName}}</span>
+          <!-- <span>{{choice.accountType}}</span> account named <span>{{choice.accountName}}</span> -->
+          <div class="accountTypeImage">
+            <img src="../../assets/icon_Checking.png" height="32" width="32" >
+          </div>
+          <div class="accountName"> Account Name here this is going to be long, so long and still long</div>
+          <div class="accountAmount">$12120.00</div>
         </div>
         <div style="height:10px;width: 100%"></div>
         <!-- <button type="button" class="btn btn-default btn-lg" (click)="buttonClicked()" ><a routerLink="/enter-amount-and-review-component"> Next</a></button> -->

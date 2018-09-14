@@ -1,0 +1,71 @@
+@media (max-width: 500px) {
+  .fullPageBgHome {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-image: url(../../assets/main-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+    width: 100%;
+  }
+  .homeContainer {
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+  .homeFooter {
+    position: absolute;
+    bottom: 0;
+    height: 75px;
+    width: 100%;
+    background: #b5985a;
+  }
+  .footerIconSection {
+    width: 100%;
+    height: 45px;
+    margin: 15px 0;
+  }
+  .footerIcons {
+    width: 25%;
+    float: left;
+    font-size: 24px;
+    text-align: center;
+  }
+  .jusAboveFooterImage {
+    background-image: url(../../assets/3-tabs.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 55px;
+    width: 100%;
+    margin-bottom: 10px;
+    position: absolute;
+    bottom: 75px;
+  }
+  .srg {
+    height: 240px;
+    width: 100%;
+    margin-bottom: 40px;
+    position: absolute;
+    bottom: 140px;
+  }
+  .blockWord {
+    height: 80px;
+    color: #fff;
+    font-family: "Interstate", "Overpass", sans-serif;
+    font-size: 40px;
+    line-height: 40px;
+    padding: 20px 40px;
+    text-align: left;
+  }
+}
+
+a {
+  color: #fff;
+  text-decoration: none !important;
+}
