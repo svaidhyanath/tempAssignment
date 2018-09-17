@@ -9,10 +9,13 @@ import {SharedAppServicesService} from '../services/shared-app-services.service'
 })
 export class ConfirmationComponentComponent implements OnInit {
 
+  applicationModel;
+
   constructor(private service: SharedAppServicesService) { }
 
   ngOnInit() {
-    console.log('on ngInit, getAppModel returns: ', this.service.getAppModel());
+    console.log('on ngInit @ confirmation --, getAppModel returns: ', this.service.getAppModel());
+    this.applicationModel = this.service.getAppModel();
   }
 
 }

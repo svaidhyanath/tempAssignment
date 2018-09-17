@@ -51,7 +51,7 @@
             <div class="input-group-prepend">
               <span>$</span>
             </div>
-            <input type="text" class="form-control no-border" placeholder="$00.00">
+            <input type="number" class="form-control no-border" placeholder="$00.00"  [(ngModel)]="this.enteredAmountValue" (change)="onInputValueChanged()">
           </div>
         </div>
       </div>
@@ -65,7 +65,7 @@
     </div>
   </div>
   <br>
-  <div class="row" style="padding: 7%;">
+  <div class="row" style="padding: 7%;"  *ngFor="let choice of fromAccountChoices">
     <div class="col">
       <img src="../../assets/icon_Checking.png" class="bank-icons">
     </div>
@@ -74,7 +74,7 @@
         <p style="margin-left: -12%; width: max-content; margin-top: -5px;">
           <span style="font-family: SFUIText-Semibold;
               font-size: 15px;
-              color: #666666;">Citi Checking ****3814</span>
+              color: #666666;">{{choice.accountName}}</span>
           <br>
           <span style="font-family: SFUIText-Regular;
               font-size: 12px;
@@ -84,10 +84,11 @@
     </div>
     <div class="col">
       <div class="radio">
-        <input type="radio" class="optradio">
+        <input type="radio" class="optradio" (click)='onSelectFromAccount(choice)' >
       </div>
     </div>
   </div>
+<!--
   <div class="row" style="padding: 7%;">
     <div class="col">
       <img src="../../assets/icon_Savings.png" class="bank-icons">
@@ -111,6 +112,7 @@
       </div>
     </div>
   </div>
+
   <div class="row" style="padding: 7%;">
     <div class="col">
       <img src="../../assets/icon_Credit.png" class="bank-icons">
@@ -134,6 +136,7 @@
       </div>
     </div>
   </div>
+ -->
   <div class="row">
     <div class="col">
         <button type="button" class="btn btn-default"><span style="font-family: Interstate-Regular;
