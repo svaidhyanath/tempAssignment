@@ -15,7 +15,27 @@ export class PayeePageComponent implements OnInit {
 
   /* user: MockUserObject; */
   toAccountChoices: MockToAccountsModel[];
+  toMockSearchAccountChoices: MockToAccountsModel[] = [
+    {
+      accountType:  'Payee',
+      accountNumber:  '1357986420',
+      accountName:  'Gavin Johnson',
+      amountBal: '1498.22',
+      isSelected:  false,
+      imageFile: 'shane-80x80.png'
+    },
+    {
+      accountType:  'Payee',
+      accountNumber:  '1357986420',
+      accountName:  'Gas Co.',
+      amountBal: '98.76',
+      isSelected:  false,
+      imageFile: 'shane-80x80.png'
+    }
+  ];
   tempFakeChoice;
+  amountInputFocussed: Boolean;
+  showMockSearchDiv: Boolean = false;
 
   constructor(
     private service: SharedAppServicesService,
@@ -25,7 +45,8 @@ export class PayeePageComponent implements OnInit {
   ngOnInit() {
    /*  this.getUserDetail(); */
     this.getToAccountsInfo();
-    console.log('on ngInit, getAppModel returns: ', this.service.getAppModel());
+    this.amountInputFocussed = false;
+    /* console.log('on ngInit, getAppModel returns: ', this.service.getAppModel()); */
   }
  /*  getUserDetail(): void {
     this.service.getUserDetails()
@@ -47,5 +68,14 @@ export class PayeePageComponent implements OnInit {
     this.tempFakeChoice.isSelected = true;
     this.service.setAppModel('toAccount', this.tempFakeChoice);
     this.router.navigate(['/from-amount']);
+  }
+  onAmountInputFocus(): void {
+    console.log('Focused on the input element to enter amount');
+    this.amountInputFocussed = true;
+  }
+  onAmountInputValueChanged(event: any) {
+    if ((event.target.value).toLowerCase() === 'ga') {
+      this.showMockSearchDiv = true;
+    }
   }
 }

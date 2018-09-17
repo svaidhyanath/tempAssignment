@@ -19,8 +19,25 @@
     <div class="payeeSearchBar">
       <div class="payeeSearchBarInner">
         <i class="fas fa-search searchIcon"></i>
-        <input class="payeeSearchBarInput" type="text" name="search" placeholder="Enter a name to search">
+        <input class="payeeSearchBarInput" type="text" name="search" placeholder="Enter a name to search"
+        (focus)="onAmountInputFocus()" (keyup)="onAmountInputValueChanged($event)">
       </div>
+    </div>
+
+    <div class="searchDiv" style="padding:10px; color:#000;" [hidden]="!amountInputFocussed" >
+      <!-- <div style="border:1px solid #fff;" [hidden]="!showMockSearchDiv">
+        show Moch Search Div
+      </div> -->
+      <div style="height:10px;width: 100%"></div>
+      <div class="fromToOptions" *ngFor="let choice of toMockSearchAccountChoices"
+      [hidden]="!showMockSearchDiv" style="font-family: 'Interstate', 'Overpass', sans-serif; "
+      (click)='onSelectToAccount(choice)'>
+          <div class="accountTypeImage">
+            <img src="../../assets/icon_Checking.png" height="32" width="32" >
+          </div>
+          <div class="accountName"> {{choice.accountName}}</div>
+          <div class="accountAmount">${{choice.amountBal}}</div>
+        </div>
     </div>
 
     <div class="recentPayeeImageSection">
@@ -29,21 +46,21 @@
 
         <div class="payeeDetails" (click)='onPayeeImageClick()'>
           <div class="payeeDetailsImage">
-              <img src="../../assets/avatar_Alex-80X80.png" alt="" height="80" width="80" style="display: block; margin:0 auto;">
+              <img src="../../assets/alex-66x66.png" alt="" height="80" width="80" style="display: block; margin:0 auto;">
           </div>
           <div class="payeeDetailsName">Alex</div>
         </div>
 
         <div class="payeeDetails">
             <div class="payeeDetailsImage">
-                <img src="../../assets/shane-80x80.png" alt="" height="80" width="80" style="display: block; margin:0 auto;">
+                <img src="../../assets/shane-66x66.png" alt="" height="80" width="80" style="display: block; margin:0 auto;">
             </div>
             <div class="payeeDetailsName">Shane</div>
         </div>
 
         <div class="payeeDetails">
             <div class="payeeDetailsImage">
-                <img src="../../assets/bing-80x80.png" alt="" height="80" width="80" style="display: block; margin:0 auto;">
+                <img src="../../assets/bing-66x66.png" alt="" height="80" width="80" style="display: block; margin:0 auto;">
             </div>
             <div class="payeeDetailsName">Bing</div>
         </div>
