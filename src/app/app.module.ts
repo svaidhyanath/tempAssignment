@@ -11,6 +11,7 @@ import { ConfirmationComponentComponent } from './confirmation-component/confirm
 //
 import { HomePageComponent } from './home-page/home-page.component';
 import { PayeePageComponent } from './payee-page/payee-page.component';
+import { ReviewComponent } from './review/review.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { PayeePageComponent } from './payee-page/payee-page.component';
     ConfirmationComponentComponent,
     //
     HomePageComponent,
-    PayeePageComponent
+    PayeePageComponent,
+    ReviewComponent
   ],
   imports: [
     BrowserModule,

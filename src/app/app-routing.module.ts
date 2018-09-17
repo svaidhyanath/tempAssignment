@@ -8,6 +8,7 @@ import { EnterAmountAndReviewComponentComponent } from './enter-amount-and-revie
 // part of the new application
 import { HomePageComponent } from './home-page/home-page.component';
 import { PayeePageComponent } from './payee-page/payee-page.component';
+import { ReviewComponent } from './review/review.component';
 
 //
 
@@ -16,7 +17,8 @@ const routes: Routes = [
   {path: 'home', component: HomePageComponent},
   {path: 'payee-list', component: PayeePageComponent},
   {path: 'from-amount', component: EnterAmountAndReviewComponentComponent},
-  {path: 'confirmation', component: ConfirmationComponentComponent}
+  {path: 'confirmation', component: ConfirmationComponentComponent},
+  {path: 'review', component: ReviewComponent}
 ];
 
 @NgModule({

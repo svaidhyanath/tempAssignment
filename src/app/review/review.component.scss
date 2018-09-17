@@ -1,0 +1,195 @@
+// .userGreet {
+//   // background-color: #000;
+//   width: 100%;
+//   height: 90px;
+//   margin: 0 auto;
+//   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+//     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+//   font-size: 17px;
+//   letter-spacing: 0.4px;
+//   text-align: center;
+//   color: #302713;
+//   padding: 10px;
+// }
+// .partialUnderline {
+//   width: 80%;
+//   margin: 10px auto 10px;
+//   color: #302713;
+//   border: 1px solid;
+// }
+// .reviewText {
+//   min-height: 250px;
+//   padding: 40px 10px;
+//   margin: 20px auto;
+//   text-align: center;
+//   border: 1px solid #b5985a;
+//   border-radius: 3px;
+//   letter-spacing: 0.4px;
+//   font-size: 17px;
+//   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+//     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+// }
+// .editBtn {
+//   width: 25%;
+//   background-color: #b5985a;
+//   color: #302713;
+//   font-weight: bold;
+//   border-radius: 4px;
+// }
+// .btnSection {
+//   width:100%;
+//   margin: 40px auto;
+//   height: 70px;
+// }
+// .acceptCancelBtn {
+//   width: 40%;
+//   box-sizing: border-box;
+// }
+
+// .text-color {
+//   color: white;
+// }
+// a{
+//     color: white;
+//     text-decoration: none;
+//     background-color: transparent;
+// }
+
+// @media (max-width: 500px) {
+//   /* .container{
+//     margin-top: 50%;
+//     margin-left: 5%;
+// }
+// .btn{
+//     width: 40%;
+//     margin-left: -10%;
+// }*/
+// }
+
+// /* .btn {
+//   width: 100%;
+//   color:#302713;
+//   font-weight: bold;
+//   background-color: #b5985a;
+// }
+// .btn:hover {
+//   background-color: #d8a330;
+// }
+// .btn:active {
+//   background-color: #6d541d;
+//   color: #fff;
+// } */
+.first-main-div{
+    background-color: black;
+  }
+  .div-one{
+    text-align: center;
+    margin-left: -12%;
+    padding: 15px;
+  }
+  .heading{
+    color: white;
+    width: max-content;
+    font-family: 'Interstate', 'Overpass', sans-serif;
+  }
+  a{
+      color: white;
+      text-decoration: none;
+      background-color: transparent;
+      font-family: 'Interstate', 'Overpass', sans-serif;
+  }
+  .avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+  }
+  .avatar-text{
+    color: white;
+    margin: 0 auto;
+   text-align: center;
+    font-family: 'Interstate', 'Overpass', sans-serif;
+  }
+  .main-div{
+    margin-top: -5%;
+  }
+  .input-group>.custom-select:not(:first-child), .input-group>.form-control:not(:first-child) {
+   margin-right: 5%;
+  }
+  .no-border {
+    font-size: 40px;
+    text-align: center;
+    color: white;
+    border: 0;
+    margin-right: 20px;
+    margin: 0 auto;
+    display: block;
+    background-color: black;
+    box-shadow: none;
+  }
+  .second-container{
+    background-color: white;
+    min-height: 550px;
+    padding-top: 25px;
+  }
+  .second-container-text{
+    margin:0 auto; 
+    text-align: center; 
+    font-family:'Interstate', 'Overpass', sans-serif;;
+    font-size: 15px;
+    color: #A5A5A5;
+    margin-top: 10px;
+    letter-spacing: 0;
+  }
+  .second-container-text-para{
+    font-family:'Interstate', 'Overpass', sans-serif;;
+    font-size: 15px;
+    color: black;
+    margin-top: 10px;
+    letter-spacing: 0;
+  }
+  .second-container-text-para-two{
+    font-family:'Interstate', 'Overpass', sans-serif;;
+    font-size: 15px;
+    color: grey;
+    margin-top: 10px;
+    letter-spacing: 0;
+    text-align: right;
+  }
+  .bank-icons{
+    height: 40px;
+    width: 40px;
+  }
+  .optradio{
+  margin-left: 45%;
+  height: 32px;
+  width: 32px;
+  margin-top: -3%;
+  }
+  .btn{
+    background-color: #b5985a;
+        width: 327px;
+      height: 56px;
+  }
+  .logo{
+    height: 36px;
+    width: 56px;
+}
+.check-margin-logo{
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 5%;
+}
+  @media (max-width: 500px){
+    // .div-one{
+    //   margin-left: -25%;
+    //   margin-right: -20%;
+    // }
+    // .avatar{
+    //   margin-left: 38%;
+    // }
+    // .avatar-text{
+    //   margin-left: 42%;
+    // }
+  }
