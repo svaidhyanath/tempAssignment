@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-
-import { MockUserObject } from '../models/mock-user-object';
+import { Component, OnInit, Input } from '@angular/core';
+import { MockFromAccountsModel } from '../models/mock-from-accounts-model';
 
 import {SharedAppServicesService} from '../services/shared-app-services.service';
 
@@ -11,24 +10,29 @@ import {SharedAppServicesService} from '../services/shared-app-services.service'
 })
 export class EnterAmountAndReviewComponentComponent implements OnInit {
 
-  user: MockUserObject;
-  appModel: Object;
+  fromAccountChoices: MockFromAccountsModel[];
+
+  @Input() enteredAmountValue: Number;
 
   constructor(private service: SharedAppServicesService) { }
 
   ngOnInit() {
-    this.getUserDetail();
-    // service.getAppModel();
+    this.getFromAccountsInfo();
   }
 
-  /* getAppModel(): void {
-    this.service.getAppModel()
-        .subscribe(appModel => this.appModel = this.appModel);
-  } */
+  getFromAccountsInfo(): void {
+    this.service.getFromAccountsOfUser()
+        .subscribe(fromAccountChoices => this.fromAccountChoices = fromAccountChoices);
+  }
 
-  getUserDetail(): void {
-    this.service.getUserDetails()
-        .subscribe(user => this.user = user);
+  onSelectFromAccount(fromAccount: MockFromAccountsModel): void {
+    fromAccount.isSelected = true;
+    // set the isSelected attribute on other choices as false
+    this.service.setAppModel('fromAccount', fromAccount);
+  }
+
+  onInputValueChanged(): void {
+    this.service.setAppModel('enteredAmount', this.enteredAmountValue);
   }
 
 }
