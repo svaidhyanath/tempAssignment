@@ -26,7 +26,7 @@ export const MOCK_TO_ACCOUNTS_ARRAY:  MockToAccountsModel[] = [
     nickName: 'Baker',
     amountBal: '98.76',
     isSelected:  false,
-    imageFile: 'baker-66x66.png'
+    imageFile: 'baker-65x65.png'
   },
   {
     accountType:  'Payee',
@@ -44,7 +44,7 @@ export const MOCK_TO_ACCOUNTS_ARRAY:  MockToAccountsModel[] = [
     nickName: 'Theo',
     amountBal: '33214.99',
     isSelected:  false,
-    imageFile: 'theo-65x65.png'
+    imageFile: 'theo-66x66.png'
   },
   {
     accountType:  'Payee',
