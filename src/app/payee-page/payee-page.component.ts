@@ -16,40 +16,40 @@ export class PayeePageComponent implements OnInit {
 
   mockRecentPayeeChoices: MockToAccountsModel[] = [
     {
-      accountType: 'Payee',
-      accountNumber: '1357986420',
-      accountName: 'Theo Riddick',
-      nickName: 'Theo',
-      amountBal: '33214.99',
-      isSelected: false,
-      imageFile: 'theo-66x66.png'
-    },
-    {
-      accountType: 'Payee',
-      accountNumber: '9999999990',
-      accountName: 'Alex Jones',
-      nickName: 'Alex',
-      amountBal: '1234.56',
-      isSelected: false,
-      imageFile: 'alex-66x66.png'
-    },
-    {
-      accountType: 'Payee',
-      accountNumber: '1357986420',
-      accountName: 'Bing Zhang',
-      nickName: 'Bing',
-      amountBal: '6264.69',
-      isSelected: false,
-      imageFile: 'bing-66x66.png'
-    },
-    {
-      accountType: 'Payee',
-      accountNumber: '4545454545',
-      accountName: 'Shane Beiber',
-      nickName: 'Shane',
+      accountType:  'Payee',
+      accountNumber:  '4545454545',
+      accountName:  'Tomo Suzuki',
+      nickName: 'Tomo',
       amountBal: '214.59',
-      isSelected: false,
-      imageFile: 'shane-66x66.png'
+      isSelected:  false,
+      imageFile: '66x66_Tomo.png'
+    },
+    {
+      accountType:  'Payee',
+      accountNumber:  '9999999990',
+      accountName:  'Sonia Cruz',
+      nickName: 'Sonia',
+      amountBal: '1234.56',
+      isSelected:  false,
+      imageFile: '66x66_Sonia.png'
+    },
+    {
+      accountType:  'Payee',
+      accountNumber:  '1357986420',
+      accountName:  'Kiran Singh',
+      nickName: 'Kiran',
+      amountBal: '98.76',
+      isSelected:  false,
+      imageFile: '66x66_Kiran.png'
+    },
+    {
+      accountType:  'Payee',
+      accountNumber:  '1357986420',
+      accountName:  'Imogen Lutz',
+      nickName: 'Imogen',
+      amountBal: '6264.69',
+      isSelected:  false,
+      imageFile: '66x66_Imogen.png'
     }
   ];
 
