@@ -4,3 +4,8 @@ a {
   color: #fff;
   text-decoration: none !important;
 }
+
+@font-face {
+  font-family: 'Interstate-local';
+  src: url('/src/assets/font/Interstate-Regular.bmap')  format('bitmap');
+}

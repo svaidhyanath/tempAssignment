@@ -31,7 +31,7 @@
             font-size: 50px;
             color: #FFFFFF;
             letter-spacing: 0.06px;margin: 0 auto;
-            text-align: center;">$250.00</p>
+            text-align: center;">${{applicationModel.enteredAmount}} </p>
             <p style="font-family: Interstate-Light;
             font-size: 13px;
             color: #FFFFFF;
@@ -57,7 +57,7 @@
           <p class="second-container-text-para">From</p>
         </div>
         <div class="col">
-          <p class="second-container-text-para-two">Citi Checking ****3813</p>
+          <p class="second-container-text-para-two">{{applicationModel.fromAccount.accountName}}</p>
         </div>
       </div>
       <div class="row">
@@ -65,7 +65,7 @@
           <p class="second-container-text-para">To</p>
         </div>
         <div class="col">
-          <p class="second-container-text-para-two">Charlie</p>
+          <p class="second-container-text-para-two">{{applicationModel.toAccount.accountName}}</p>
         </div>
       </div>
       <div class="row">
@@ -81,7 +81,7 @@
           <p class="second-container-text-para">Date</p>
         </div>
         <div class="col">
-          <p class="second-container-text-para-two">02/06/2018</p>
+          <p class="second-container-text-para-two">{{todaysDateString}}</p>
         </div>
       </div>
       <div class="row">

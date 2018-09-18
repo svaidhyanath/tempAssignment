@@ -12,7 +12,9 @@ export class EnterAmountAndReviewComponentComponent implements OnInit {
 
   fromAccountChoices: MockFromAccountsModel[];
 
-  @Input() enteredAmountValue: Number;
+  @Input() enteredAmountValue: String;
+
+  amountVal: String;
 
   constructor(private service: SharedAppServicesService) { }
 
@@ -31,8 +33,11 @@ export class EnterAmountAndReviewComponentComponent implements OnInit {
     this.service.setAppModel('fromAccount', fromAccount);
   }
 
-  onInputValueChanged(): void {
-    this.service.setAppModel('enteredAmount', this.enteredAmountValue);
+  onInputValueChanged(event: any) {
+    console.log(event);
+    this.amountVal = parseFloat(event).toFixed(2);
+    this.service.setAppModel('enteredAmount', this.amountVal);
+    return this.amountVal;
   }
 
 }

@@ -1,0 +1,90 @@
+
+  .first-main-div{
+    background-color: black;
+  }
+  .div-one{
+    text-align: center;
+    margin-left: -12%;
+    padding: 15px;
+  }
+  .heading{
+    color: white;
+    width: max-content;
+    font-family:  'Overpass', 'Interstate', sans-serif;
+  }
+  a{
+      color: white;
+      text-decoration: none;
+      background-color: transparent;
+      font-family:  'Overpass', 'Interstate', sans-serif;
+  }
+  .avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+  }
+  .avatar-text{
+    color: white;
+    margin: 0 auto;
+   text-align: center;
+    font-family:  'Overpass', 'Interstate', sans-serif;
+  }
+  .main-div{
+    margin-top: -5%;
+  }
+  .input-group>.custom-select:not(:first-child), .input-group>.form-control:not(:first-child) {
+   margin-right: 5%;
+  }
+  .no-border {
+    font-size: 40px;
+    text-align: center;
+    color: white;
+    border: 0;
+    margin-right: 20px;
+    margin: 0 auto;
+    display: block;
+    background-color: black;
+    box-shadow: none;
+  }
+  .second-container{
+    background-color: white;
+    min-height: 550px;
+  }
+  .second-container-text{
+    margin:0 auto;
+    text-align: center;
+    font-family: 'Overpass', 'Interstate', sans-serif;;
+    font-size: 15px;
+    color: #A5A5A5;
+    margin-top: 10px;
+    letter-spacing: 0;
+  }
+  .bank-icons{
+    height: 40px;
+    width: 40px;
+  }
+  .optradio{
+  margin-left: 45%;
+  height: 32px;
+  width: 32px;
+  margin-top: -3%;
+  }
+  .btn{
+    background-color: #b5985a;
+        width: 327px;
+      height: 56px;
+  }
+  @media (max-width: 500px){
+    // .div-one{
+    //   margin-left: -25%;
+    //   margin-right: -20%;
+    // }
+    // .avatar{
+    //   margin-left: 38%;
+    // }
+    // .avatar-text{
+    //   margin-left: 42%;
+    // }
+  }

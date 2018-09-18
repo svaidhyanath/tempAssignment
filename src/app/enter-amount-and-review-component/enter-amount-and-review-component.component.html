@@ -26,11 +26,14 @@
       <div class="row">
         <div class="col">
           <div class="input-group mb-3">
-            <div class="input-group-prepend">
+            <!-- <div class="input-group-prepend">
               <span>$</span>
-            </div>
-            <input type="number" class="form-control no-border" placeholder="$00.00"
-            [(ngModel)]="this.enteredAmountValue"  (change)="onInputValueChanged()">
+            </div> -->
+            <input type="tel" class="form-control no-border" placeholder="$00.00"
+            [ngModel]="this.enteredAmountValue | currency:'USD'"
+            [ngModelOptions]="{updateOn:'blur'}"
+             (ngModelChange)="this.enteredAmountValue=onInputValueChanged($event)">
+            <!-- <div style="color:red;">{{this.enteredAmountValue}}</div> -->
           </div>
         </div>
       </div>
