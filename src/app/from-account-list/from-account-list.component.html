@@ -26,9 +26,9 @@
       <div class="row">
         <div class="col">
           <div class="input-group mb-3">
-            <input autofocus type="tel" style="font-family: 'Overpass', 'Interstate', sans-serif; height:40px; " class="form-control no-border"
-              placeholder="$0.00" [ngModel]="this.enteredAmountValue | currency:'USD'" [ngModelOptions]="{updateOn:'blur'}"
-              (ngModelChange)="this.enteredAmountValue=onInputValueChanged($event)">
+            <div style="font-family: 'Overpass', 'Interstate', sans-serif; height:40px; " class="form-control no-border">
+              ${{applicationModel.enteredAmount}}
+            </div>
           </div>
         </div>
       </div>
@@ -36,15 +36,15 @@
   </div>
 </div>
 <div class="container second-container">
-   <div class="row">
+  <div class="row">
     <div class="col">
-      <p class="second-container-text"></p>
+      <p class="second-container-text">Accounts</p>
     </div>
   </div>
   <br>
-<!--  <div class="row" style="padding: 7%;" *ngFor="let choice of fromAccountChoices">
+  <div class="row" style="padding: 7%;" *ngFor="let choice of fromAccountChoices">
     <div class="col">
-      <img src="../../assets/icon_Checking.png" class="bank-icons">
+      <img src="{{this.payeeImageBaseURL}}{{choice.iconImage}}" class="bank-icons">
     </div>
     <div class="col">
       <div class="radio">
@@ -66,12 +66,12 @@
       </div>
     </div>
   </div>
- -->
+
   <div class="row">
     <div class="col">
-      <a routerLink="/from-account" style="display: block; margin: 0 auto;">
+      <a routerLink="/review">
         <button type="button" class="btn btn-default" style="margin: 0 auto;
-        display: inherit;"><span style="font-family:'Interstate', 'Overpass',  sans-serif;
+        display: inherit;"><span style="font-family: Interstate-Regular;
           font-size: 18px;
           color: #FFFFFF;
           text-align: center;">

@@ -99,18 +99,18 @@ export class PayeePageComponent implements OnInit {
     toAccount.isSelected = true;
     // set the isSelected attribute on other choices as false
     this.service.setAppModel('toAccount', toAccount);
-    this.router.navigate(['/from-amount']);
+    this.router.navigate(['/enter-amount']);
   }
   onPayeeImageClick(toAccount: MockToAccountsModel): void {
     toAccount.isSelected = true;
     // set the isSelected attribute on other choices as false
     this.service.setAppModel('toAccount', toAccount);
-    this.router.navigate(['/from-amount']);
+    this.router.navigate(['/enter-amount']);
   }
   onAmountInputFocus(): void {
     this.amountInputFocussed = true;
   }
-  onAmountInputValueChanged(event: any) {
+  onInputValueChanged(event: any) {
     if (event.target.value.toLowerCase() === 'ga') {
       this.showMockSearchDiv = true;
     }

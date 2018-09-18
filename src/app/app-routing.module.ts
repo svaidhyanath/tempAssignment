@@ -7,14 +7,16 @@ import { EnterAmountAndReviewComponentComponent } from './enter-amount-and-revie
 import { HomePageComponent } from './home-page/home-page.component';
 import { PayeePageComponent } from './payee-page/payee-page.component';
 import { ReviewComponent } from './review/review.component';
+import { FromAccountListComponent } from './from-account-list/from-account-list.component';
 
 const routes: Routes = [
   {path: '', component: HomePageComponent },
   {path: 'home', component: HomePageComponent},
   {path: 'payee-list', component: PayeePageComponent},
-  {path: 'from-amount', component: EnterAmountAndReviewComponentComponent},
+  {path: 'enter-amount', component: EnterAmountAndReviewComponentComponent},
   {path: 'confirmation', component: ConfirmationComponentComponent},
-  {path: 'review', component: ReviewComponent}
+  {path: 'review', component: ReviewComponent},
+  {path: 'from-account', component: FromAccountListComponent}
 ];
 
 @NgModule({
