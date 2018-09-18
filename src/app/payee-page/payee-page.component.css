@@ -127,9 +127,6 @@ a {
     font-size: 14px;
   }
 
-  /*.fromToComponentContent {
-     min-height: 500px;
-  }*/
   .fromToHeader {
     background-color: #b5985a;
     color: #fff;
@@ -149,7 +146,6 @@ a {
     padding: 21px 10px;
     font-family: "Interstate", "Overpass", sans-serif;
     font-size: 19px;
-    /* font-weight: bold; */
     text-align: left;
     margin: 0 auto;
     border: 1px solid rgba(164, 164, 164, 0.812);
@@ -174,7 +170,6 @@ a {
     margin: 0;
     padding: 0;
     background: #fff;
-    /* min-height: 500px; */
   }
   .searchToOptions {
     background-color: rgba(255, 255, 255, 0.65);
