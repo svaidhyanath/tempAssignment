@@ -50,7 +50,7 @@
 .check-margin-text h3{
     color: white;
 }
-hr { 
+hr {
     display: block;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
@@ -87,6 +87,17 @@ a{
     color: white;
     text-decoration: none;
     background-color: transparent;
+}
+.fullPageBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background-image: url(../../assets/success-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 @media (max-width: 500px){

@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { MockFromAccountsModel } from '../models/mock-from-accounts-model';
 
-import {SharedAppServicesService} from '../services/shared-app-services.service';
+import { SharedAppServicesService } from '../services/shared-app-services.service';
 
 @Component({
   selector: 'app-enter-amount-and-review-component',
@@ -9,22 +9,30 @@ import {SharedAppServicesService} from '../services/shared-app-services.service'
   styleUrls: ['./enter-amount-and-review-component.component.scss']
 })
 export class EnterAmountAndReviewComponentComponent implements OnInit {
-
   fromAccountChoices: MockFromAccountsModel[];
 
-  @Input() enteredAmountValue: String;
+  @Input()
+  enteredAmountValue: String;
 
   amountVal: String;
 
-  constructor(private service: SharedAppServicesService) { }
+  applicationModel;
+
+  payeeImageBaseURL: String = '../../assets/';
+
+  constructor(private service: SharedAppServicesService) {}
 
   ngOnInit() {
     this.getFromAccountsInfo();
+    this.applicationModel = this.service.getAppModel();
   }
 
   getFromAccountsInfo(): void {
-    this.service.getFromAccountsOfUser()
-        .subscribe(fromAccountChoices => this.fromAccountChoices = fromAccountChoices);
+    this.service
+      .getFromAccountsOfUser()
+      .subscribe(
+        fromAccountChoices => (this.fromAccountChoices = fromAccountChoices)
+      );
   }
 
   onSelectFromAccount(fromAccount: MockFromAccountsModel): void {
@@ -39,5 +47,4 @@ export class EnterAmountAndReviewComponentComponent implements OnInit {
     this.service.setAppModel('enteredAmount', this.amountVal);
     return this.amountVal;
   }
-
 }

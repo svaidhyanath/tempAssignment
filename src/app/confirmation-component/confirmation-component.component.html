@@ -1,3 +1,4 @@
+<div class="fullPageBg"></div>
 <div class="container">
   <div class="row" style="text-align: center; color: white">
   </div>
@@ -5,17 +6,13 @@
     <div class="col">
       <div class="row check-margin">
         <div class="col">
-          <!-- <img src="../../assets/PH Success BG.png"> -->
           <img src="../../assets/icon_Checkmark.png" alt="Successful" class="success-check">
         </div>
       </div>
       <div class="row check-margin-number">
         <div class="col">
-          <p style="font-family: 'Interstate', 'Overpass', sans-serif;;
-          font-size: 50px;
-          color: #FFFFFF;
-          letter-spacing: 0.06px;
-          text-align: center;">${{applicationModel.enteredAmount}}</p>
+          <p style="font-family: 'Interstate', 'Overpass', sans-serif; font-size: 50px; color: #FFF;
+          letter-spacing: 0.06px; text-align: center;">${{applicationModel.enteredAmount}}</p>
         </div>
       </div>
       <div class="row check-margin-text">
@@ -36,9 +33,7 @@
       <p style="
       font-size: 14px;
       color: #FFFFFF;">Updated Balances</p>
-      <p style="
-      font-size: 18px;
-      color: #FFFFFF;">{{applicationModel.fromAccount.accountName}} &nbsp;&nbsp;&nbsp;&nbsp; 3723.80</p>
+      <p style="font-size: 18px; color: #FFF;"><span>{{applicationModel.fromAccount.accountName}}</span>  <span style="float: right;">3723.80</span></p>
       <hr style="height: 1px; color:#FFFFFF">
       <p style="
       font-size: 14px;
@@ -51,7 +46,7 @@
       <div class="row button-margin">
         <div class="col">
           <button type="button" class="btn btn-default btn-lg">
-            <a routerLink="/from-to-component">Send more</a>
+            <a routerLink="/payee-list">Send more</a>
           </button>
           <button type="button" class="btn btn-outline-primary btn-lg">
             <a routerLink="">Done</a>

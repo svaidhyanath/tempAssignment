@@ -1,9 +1,9 @@
 import { Component, OnInit, Input } from '@angular/core';
 
-/* import { MockUserObject } from '../models/mock-user-object'; */
 import { MockToAccountsModel } from '../models/mock-to-accounts-model';
 
 import {SharedAppServicesService} from '../services/shared-app-services.service';
+
 import { Router } from '@angular/router';
 
 @Component({
@@ -12,27 +12,69 @@ import { Router } from '@angular/router';
   styleUrls: ['./payee-page.component.css']
 })
 export class PayeePageComponent implements OnInit {
-
-  /* user: MockUserObject; */
   toAccountChoices: MockToAccountsModel[];
-  toMockSearchAccountChoices: MockToAccountsModel[] = [
+
+  mockRecentPayeeChoices: MockToAccountsModel[] = [
     {
-      accountType:  'Payee',
-      accountNumber:  '1357986420',
-      accountName:  'Gavin Johnson',
-      amountBal: '1498.22',
-      isSelected:  false,
-      imageFile: 'shane-80x80.png'
+      accountType: 'Payee',
+      accountNumber: '1357986420',
+      accountName: 'Theo Riddick',
+      nickName: 'Theo',
+      amountBal: '33214.99',
+      isSelected: false,
+      imageFile: 'theo-65x65.png'
     },
     {
-      accountType:  'Payee',
-      accountNumber:  '1357986420',
-      accountName:  'Gas Co.',
-      amountBal: '98.76',
-      isSelected:  false,
-      imageFile: 'shane-80x80.png'
+      accountType: 'Payee',
+      accountNumber: '9999999990',
+      accountName: 'Alex Jones',
+      nickName: 'Alex',
+      amountBal: '1234.56',
+      isSelected: false,
+      imageFile: 'alex-66x66.png'
+    },
+    {
+      accountType: 'Payee',
+      accountNumber: '1357986420',
+      accountName: 'Bing Zhang',
+      nickName: 'Bing',
+      amountBal: '6264.69',
+      isSelected: false,
+      imageFile: 'bing-66x66.png'
+    },
+    {
+      accountType: 'Payee',
+      accountNumber: '4545454545',
+      accountName: 'Shane Beiber',
+      nickName: 'Shane',
+      amountBal: '214.59',
+      isSelected: false,
+      imageFile: 'shane-66x66.png'
     }
   ];
+
+  toMockSearchAccountChoices: MockToAccountsModel[] = [
+    {
+      accountType: 'Payee',
+      accountNumber: '1357986420',
+      accountName: 'Gavin Johnson',
+      nickName: 'Gavin',
+      amountBal: '1498.22',
+      isSelected: false,
+      imageFile: 'gavin-62x62.png'
+    },
+    {
+      accountType: 'Payee',
+      accountNumber: '1357986420',
+      accountName: 'Gas Co.',
+      nickName: 'Gas Co.',
+      amountBal: '98.76',
+      isSelected: false,
+      imageFile: 'gas_co_64x63.png'
+    }
+  ];
+
+  payeeImageBaseURL: String = '../../assets/';
   tempFakeChoice;
   amountInputFocussed: Boolean;
   showMockSearchDiv: Boolean = false;
@@ -40,41 +82,36 @@ export class PayeePageComponent implements OnInit {
   constructor(
     private service: SharedAppServicesService,
     private router: Router
-    ) { }
+    ) {}
 
   ngOnInit() {
-   /*  this.getUserDetail(); */
     this.getToAccountsInfo();
     this.amountInputFocussed = false;
-    /* console.log('on ngInit, getAppModel returns: ', this.service.getAppModel()); */
   }
- /*  getUserDetail(): void {
-    this.service.getUserDetails()
-        .subscribe(user => this.user = user);
-  } */
   getToAccountsInfo(): void {
-    this.service.getToAccountsOfUser()
-        .subscribe(toAccountChoices => this.toAccountChoices = toAccountChoices);
+    this.service
+      .getToAccountsOfUser()
+      .subscribe(
+        toAccountChoices => (this.toAccountChoices = toAccountChoices)
+      );
   }
   onSelectToAccount(toAccount: MockToAccountsModel): void {
     toAccount.isSelected = true;
     // set the isSelected attribute on other choices as false
     this.service.setAppModel('toAccount', toAccount);
-    console.log('onSelectToAccount , getAppModel returns: ', this.service.getAppModel());
     this.router.navigate(['/from-amount']);
   }
-  onPayeeImageClick(): void {
-    this.tempFakeChoice = this.toAccountChoices[1];
-    this.tempFakeChoice.isSelected = true;
-    this.service.setAppModel('toAccount', this.tempFakeChoice);
+  onPayeeImageClick(toAccount: MockToAccountsModel): void {
+    toAccount.isSelected = true;
+    // set the isSelected attribute on other choices as false
+    this.service.setAppModel('toAccount', toAccount);
     this.router.navigate(['/from-amount']);
   }
   onAmountInputFocus(): void {
-    console.log('Focused on the input element to enter amount');
     this.amountInputFocussed = true;
   }
   onAmountInputValueChanged(event: any) {
-    if ((event.target.value).toLowerCase() === 'ga') {
+    if (event.target.value.toLowerCase() === 'ga') {
       this.showMockSearchDiv = true;
     }
   }

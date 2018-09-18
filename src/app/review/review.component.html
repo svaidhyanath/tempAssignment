@@ -5,7 +5,7 @@
     <div class="main-div">
       <div class="row div-one">
         <div class="col">
-          <a href="">
+          <a routerLink="/from-amount">
             <i class="fas fa-chevron-left" style="font-size: 135%;"></i>
           </a>
         </div>
@@ -13,20 +13,19 @@
           <p class="heading">Review Payment</p>
         </div>
         <div class="col" style="margin-top: -3px;">
-          <a href="">Cancel</a>
+          <a routerLink="">Cancel</a>
         </div>
       </div>
 
       <div class="row">
         <div class="col">
-          <img src="../../assets/avatar_Alex.png" alt="Avatar" class="avatar">
-          <p class="avatar-text">Alex</p>
+          <img src="{{this.payeeImageBaseURL}}{{applicationModel.toAccount.imageFile}}" alt="Avatar" class="avatar">
+          <p class="avatar-text">{{applicationModel.toAccount.nickName}}</p>
         </div>
       </div>
       <div class="row">
         <div class="col">
           <div class="input-group mb-3">
-            <!-- <input type="text" class="form-control no-border" placeholder="$00.00"> -->
             <p style="font-family: Interstate-Light;
             font-size: 50px;
             color: #FFFFFF;

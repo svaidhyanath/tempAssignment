@@ -12,6 +12,7 @@ export class ReviewComponent implements OnInit {
   applicationModel;
   todaysDateObj;
   todaysDateString;
+  payeeImageBaseURL: String = '../../assets/';
 
   constructor(private service: SharedAppServicesService) { }
 
@@ -20,7 +21,6 @@ export class ReviewComponent implements OnInit {
     this.todaysDateString = (this.todaysDateObj.getMonth() + 1)
     + '/' + this.todaysDateObj.getDate()
     + '/' + this.todaysDateObj.getFullYear();
-    console.log('on ngInit @ confirmation --, getAppModel returns: ', this.service.getAppModel());
     this.applicationModel = this.service.getAppModel();
   }
 

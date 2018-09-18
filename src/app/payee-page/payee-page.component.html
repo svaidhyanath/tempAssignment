@@ -10,61 +10,40 @@
       Send Money
     </div>
     <div class="cancel">
-        <a routerLink="">Cancel</a>
+      <a routerLink="">Cancel</a>
     </div>
   </div>
 
-  <div class="recentPayeeSection" >
+  <div class="recentPayeeSection">
 
     <div class="payeeSearchBar">
       <div class="payeeSearchBarInner">
         <i class="fas fa-search searchIcon"></i>
-        <input class="payeeSearchBarInput" type="text" name="search" placeholder="Enter a name to search"
-        (focus)="onAmountInputFocus()" (keyup)="onAmountInputValueChanged($event)">
+        <input class="payeeSearchBarInput" type="text" name="search" placeholder="Enter a name to search" (focus)="onAmountInputFocus()"
+          (keyup)="onAmountInputValueChanged($event)">
       </div>
     </div>
 
-    <div class="searchDiv" style="padding:10px; color:#000;" [hidden]="!amountInputFocussed" >
-      <!-- <div style="border:1px solid #fff;" [hidden]="!showMockSearchDiv">
-        show Moch Search Div
-      </div> -->
+    <div class="searchDiv" style="padding:10px; color:#000;" [hidden]="!amountInputFocussed">
       <div style="height:10px;width: 100%"></div>
-      <div class="fromToOptions" *ngFor="let choice of toMockSearchAccountChoices"
-      [hidden]="!showMockSearchDiv" style="font-family:  'Overpass', 'Interstate', sans-serif; "
-      (click)='onSelectToAccount(choice)'>
-          <div class="accountTypeImage">
-            <img src="../../assets/icon_Checking.png" height="32" width="32" >
-          </div>
-          <div class="accountName"> {{choice.accountName}}</div>
-          <div class="accountAmount">${{choice.amountBal}}</div>
+      <div class="searchToOptions" *ngFor="let choice of toMockSearchAccountChoices" [hidden]="!showMockSearchDiv"
+        (click)='onSelectToAccount(choice)' style="font-family:  'Overpass', 'Interstate', sans-serif; ">
+        <div class="accountSearchImage">
+          <img src="{{this.payeeImageBaseURL}}{{choice.imageFile}}" height="60" width="60">
         </div>
+        <div class="searchDivAccountName"> {{choice.accountName}}</div>
+      </div>
     </div>
 
     <div class="recentPayeeImageSection">
       <div class="row recentPayeeImageSectionHeader">Recent Payees</div>
-      <div class="row recentPayeeImageSectionImages" >
-
-        <div class="payeeDetails" (click)='onPayeeImageClick()'>
+      <div class="row recentPayeeImageSectionImages">
+        <div class="payeeDetails" (click)='onPayeeImageClick(choices)' *ngFor="let choices of mockRecentPayeeChoices">
           <div class="payeeDetailsImage">
-              <img src="../../assets/alex-66x66.png" alt="" height="80" width="80" style="display: block; margin:0 auto;">
+            <img src="{{this.payeeImageBaseURL}}{{choices.imageFile}}" alt="" height="80" width="80" style="display: block; margin:0 auto;">
           </div>
-          <div class="payeeDetailsName">Alex</div>
+          <div class="payeeDetailsName">{{choices.nickName}}</div>
         </div>
-
-        <div class="payeeDetails">
-            <div class="payeeDetailsImage">
-                <img src="../../assets/shane-66x66.png" alt="" height="80" width="80" style="display: block; margin:0 auto;">
-            </div>
-            <div class="payeeDetailsName">Shane</div>
-        </div>
-
-        <div class="payeeDetails">
-            <div class="payeeDetailsImage">
-                <img src="../../assets/bing-66x66.png" alt="" height="80" width="80" style="display: block; margin:0 auto;">
-            </div>
-            <div class="payeeDetailsName">Bing</div>
-        </div>
-
       </div>
     </div>
 
@@ -72,29 +51,25 @@
 
 </div>
 <div class="container" style="min-height: 450px;">
-    <div class="fromToComponentContent">
-        <div class="fromToHeader">Account</div>
-        <div class="fromToOptions" *ngFor="let choice of toAccountChoices" (click)='onSelectToAccount(choice)'>
-          <!-- <span>{{choice.accountType}}</span> account named <span>{{choice.accountName}}</span> -->
-          <div class="accountTypeImage">
-            <img src="../../assets/icon_Checking.png" height="32" width="32" >
-          </div>
-          <div class="accountName"> {{choice.accountName}}</div>
-          <div class="accountAmount">${{choice.amountBal}}</div>
-        </div>
-        <div style="height:10px;width: 100%"></div>
-
-        <div class="fromToHeader">Payee</div>
-        <div class="fromToOptions" *ngFor="let choice of toAccountChoices" (click)='onSelectToAccount(choice)'>
-          <!-- <span>{{choice.accountType}}</span> account named <span>{{choice.accountName}}</span> -->
-          <div class="accountTypeImage">
-            <img src="../../assets/icon_Checking.png" height="32" width="32" >
-          </div>
-          <div class="accountName"> {{choice.accountName}}</div>
-          <div class="accountAmount">${{choice.amountBal}}</div>
-        </div>
-        <div style="height:10px;width: 100%"></div>
-        <!-- <button type="button" class="btn btn-default btn-lg" (click)="buttonClicked()" ><a routerLink="/enter-amount-and-review-component"> Next</a></button> -->
+  <div class="fromToComponentContent">
+    <div class="fromToHeader">Account</div>
+    <div class="fromToOptions" *ngFor="let choice of toAccountChoices" (click)='onSelectToAccount(choice)'>
+      <div class="accountTypeImage">
+        <img src="../../assets/icon_Checking.png" height="32" width="32">
       </div>
-</div>
+      <div class="accountName"> {{choice.accountName}}</div>
+      <div class="accountAmount">${{choice.amountBal}}</div>
+    </div>
+    <div style="height:10px;width: 100%"></div>
 
+    <div class="fromToHeader">Payee</div>
+    <div class="fromToOptions" *ngFor="let choice of toAccountChoices" (click)='onSelectToAccount(choice)'>
+      <div class="accountTypeImage">
+        <img src="../../assets/icon_Checking.png" height="32" width="32">
+      </div>
+      <div class="accountName"> {{choice.accountName}}</div>
+      <div class="accountAmount">${{choice.amountBal}}</div>
+    </div>
+    <div style="height:10px;width: 100%"></div>
+  </div>
+</div>

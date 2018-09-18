@@ -19,21 +19,15 @@
 
       <div class="row">
         <div class="col">
-          <img src="../../assets/avatar_Alex.png" alt="Avatar" class="avatar">
-          <p class="avatar-text">Alex</p>
+          <img src="{{this.payeeImageBaseURL}}{{applicationModel.toAccount.imageFile}}" alt="Avatar" class="avatar">
+          <p class="avatar-text">{{applicationModel.toAccount.nickName}}</p>
         </div>
       </div>
       <div class="row">
         <div class="col">
           <div class="input-group mb-3">
-            <!-- <div class="input-group-prepend">
-              <span>$</span>
-            </div> -->
-            <input type="tel" class="form-control no-border" placeholder="$00.00"
-            [ngModel]="this.enteredAmountValue | currency:'USD'"
-            [ngModelOptions]="{updateOn:'blur'}"
-             (ngModelChange)="this.enteredAmountValue=onInputValueChanged($event)">
-            <!-- <div style="color:red;">{{this.enteredAmountValue}}</div> -->
+            <input type="tel" class="form-control no-border" placeholder="$00.00" [ngModel]="this.enteredAmountValue | currency:'USD'"
+              [ngModelOptions]="{updateOn:'blur'}" (ngModelChange)="this.enteredAmountValue=onInputValueChanged($event)">
           </div>
         </div>
       </div>
@@ -47,7 +41,7 @@
     </div>
   </div>
   <br>
-  <div class="row" style="padding: 7%;"  *ngFor="let choice of fromAccountChoices">
+  <div class="row" style="padding: 7%;" *ngFor="let choice of fromAccountChoices">
     <div class="col">
       <img src="../../assets/icon_Checking.png" class="bank-icons">
     </div>
@@ -60,72 +54,26 @@
           <br>
           <span style="font-family: SFUIText-Regular;
               font-size: 12px;
-              color: #A7A7A7;">Available balance 2567.02</span>
+              color: #A7A7A7;">Available
+            balance 2567.02</span>
         </p>
       </div>
     </div>
     <div class="col">
       <div class="radio">
-        <input type="radio" class="optradio" (click)='onSelectFromAccount(choice)' >
-      </div>
-    </div>
-  </div>
-<!--
-  <div class="row" style="padding: 7%;">
-    <div class="col">
-      <img src="../../assets/icon_Savings.png" class="bank-icons">
-    </div>
-    <div class="col">
-      <div class="radio">
-        <p style="margin-left: -12%; width: max-content; margin-top: -5px;">
-          <span style="font-family: SFUIText-Semibold;
-                font-size: 15px;
-                color: #666666;">Citi Savings ****5671</span>
-          <br>
-          <span style="font-family: SFUIText-Regular;
-                font-size: 12px;
-                color: #A7A7A7;">Available balance 12567.02</span>
-        </p>
-      </div>
-    </div>
-    <div class="col">
-      <div class="radio">
-        <input type="radio" class="optradio">
+        <input type="radio" class="optradio" (click)='onSelectFromAccount(choice)'>
       </div>
     </div>
   </div>
 
-  <div class="row" style="padding: 7%;">
-    <div class="col">
-      <img src="../../assets/icon_Credit.png" class="bank-icons">
-    </div>
-    <div class="col">
-      <div class="radio">
-        <p style="margin-left: -12%; width: max-content; margin-top: -5px;">
-          <span style="font-family: SFUIText-Semibold;
-              font-size: 15px;
-              color: #666666;">Credit Card ****6448</span>
-          <br>
-          <span style="font-family: SFUIText-Regular;
-              font-size: 12px;
-              color: #A7A7A7;">Available balance 5000.00</span>
-        </p>
-      </div>
-    </div>
-    <div class="col">
-      <div class="radio">
-        <input type="radio" class="optradio">
-      </div>
-    </div>
-  </div>
- -->
   <div class="row">
     <div class="col">
-        <button type="button" class="btn btn-default" style="margin: 0 auto;
+      <button type="button" class="btn btn-default" style="margin: 0 auto;
         display: inherit;"><span style="font-family: Interstate-Regular;
           font-size: 18px;
           color: #FFFFFF;
-          text-align: center;"><a routerLink="/review"> Next</a></span></button>
+          text-align: center;"><a
+            routerLink="/review"> Next</a></span></button>
     </div>
   </div>
 </div>

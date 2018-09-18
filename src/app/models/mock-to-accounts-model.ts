@@ -5,4 +5,5 @@ export class MockToAccountsModel  {
   isSelected: Boolean;
   amountBal: String;
   imageFile: String;
+  nickName: String;
 }
