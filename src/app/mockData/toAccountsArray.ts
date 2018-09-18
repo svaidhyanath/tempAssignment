@@ -49,19 +49,19 @@ export const MOCK_TO_ACCOUNTS_ARRAY:  MockToAccountsModel[] = [
   {
     accountType:  'Payee',
     accountNumber:  '1357986420',
-    accountName:  'Gavin Johnson',
-    nickName: 'Gavin',
-    amountBal: '1498.22',
-    isSelected:  false,
-    imageFile: 'gavin-62x62.png'
-  },
-  {
-    accountType:  'Payee',
-    accountNumber:  '1357986420',
     accountName:  'Gas Co.',
     nickName: 'Gas Co.',
     amountBal: '98.76',
     isSelected:  false,
     imageFile: 'gas_co_64x63.png'
+  },
+  {
+    accountType:  'Payee',
+    accountNumber:  '1357986420',
+    accountName:  'Gavin Johnson',
+    nickName: 'Gavin',
+    amountBal: '1498.22',
+    isSelected:  false,
+    imageFile: 'gavin-62x62.png'
   }
 ];
