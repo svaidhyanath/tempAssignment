@@ -25,8 +25,8 @@
       </div>
       <div class="row">
         <div class="col">
-          <div class="input-group mb-3">
-            <input autofocus type="tel" style="font-family: 'Overpass', 'Interstate', sans-serif; height:40px; " class="form-control no-border"
+          <div class="input-group mb-3" style="height:70px;">
+            <input autofocus type="tel" style="font-family: 'Overpass', 'Interstate', sans-serif; height:70px; " class="form-control no-border"
               placeholder="$0.00" [ngModel]="this.enteredAmountValue | currency:'USD'" [ngModelOptions]="{updateOn:'blur'}"
               (ngModelChange)="this.enteredAmountValue=onInputValueChanged($event)">
           </div>

@@ -25,8 +25,8 @@
       </div>
       <div class="row">
         <div class="col">
-          <div class="input-group mb-3">
-            <div style="font-family: 'Overpass', 'Interstate', sans-serif; height:40px; " class="form-control no-border">
+          <div class="input-group mb-3" style="height:70px;">
+            <div style="font-family: 'Overpass', 'Interstate', sans-serif; height:70px; " class="form-control no-border">
               ${{applicationModel.enteredAmount}}
             </div>
           </div>
@@ -42,8 +42,8 @@
     </div>
   </div>
   <br>
-  <div class="row" style="padding: 7%;" *ngFor="let choice of fromAccountChoices">
-    <div class="col">
+  <div class="row" style="padding: 10px;" *ngFor="let choice of fromAccountChoices">
+    <div class="col" style="height:40px; width:40px; float:left;">
       <img src="{{this.payeeImageBaseURL}}{{choice.iconImage}}" class="bank-icons">
     </div>
     <div class="col">
@@ -71,7 +71,7 @@
     <div class="col">
       <a routerLink="/review">
         <button type="button" class="btn btn-default" style="margin: 0 auto;
-        display: inherit;"><span style="font-family: Interstate-Regular;
+        display: inherit;"><span style="font-family: 'Overpass', 'Interstate', sans-serif;
           font-size: 18px;
           color: #FFFFFF;
           text-align: center;">
