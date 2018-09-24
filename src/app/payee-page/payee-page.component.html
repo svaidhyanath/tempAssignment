@@ -19,7 +19,7 @@
     <div class="payeeSearchBar">
       <div class="payeeSearchBarInner">
         <i class="fas fa-search searchIcon"></i>
-        <input class="payeeSearchBarInput" type="text" name="search" placeholder="Enter a name to search" (focus)="onAmountInputFocus()"
+        <input class="payeeSearchBarInput" type="text" name="search" placeholder="Enter a name to search" (focus)="onSearchNameInputFocus()"
           (keyup)="onInputValueChanged($event)">
       </div>
     </div>
@@ -52,17 +52,17 @@
 </div>
 <div class="container" style="min-height: 450px;">
   <div class="fromToComponentContent">
-    <div class="fromToHeader">Account</div>
+    <div class="fromToHeader">Payee</div>
     <div class="fromToOptions" *ngFor="let choice of toAccountChoices" (click)='onSelectToAccount(choice)'>
       <div class="accountTypeImage">
-        <img src="../../assets/icon_Checking.png" height="32" width="32">
+        <img src="{{this.payeeImageBaseURL}}{{choice.imageFile}}" height="40" width="40">
       </div>
       <div class="accountName"> {{choice.accountName}}</div>
       <div class="accountAmount">${{choice.amountBal}}</div>
     </div>
     <div style="height:10px;width: 100%"></div>
 
-    <div class="fromToHeader">Payee</div>
+    <div class="fromToHeader">Account</div>
     <div class="fromToOptions" *ngFor="let choice of toAccountChoices" (click)='onSelectToAccount(choice)'>
       <div class="accountTypeImage">
         <img src="../../assets/icon_Checking.png" height="32" width="32">

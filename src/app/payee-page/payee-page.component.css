@@ -152,12 +152,14 @@ a {
   }
   .accountTypeImage {
     width: 40px;
+    height:40px;
     float: left;
   }
   .accountName {
     width: 61%;
+    height:40px;
     float: left;
-    padding: 0 10px;
+    padding: 5px 10px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -165,6 +167,8 @@ a {
   .accountAmount {
     float: right;
     text-align: right;
+    height:40px;
+    padding: 5px 0;
   }
   .container {
     margin: 0;

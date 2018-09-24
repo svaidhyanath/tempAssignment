@@ -14,69 +14,12 @@ import { Router } from '@angular/router';
 export class PayeePageComponent implements OnInit {
   toAccountChoices: MockToAccountsModel[];
 
-  mockRecentPayeeChoices: MockToAccountsModel[] = [
-    {
-      accountType:  'Payee',
-      accountNumber:  '4545454545',
-      accountName:  'Tomo Suzuki',
-      nickName: 'Tomo',
-      amountBal: '214.59',
-      isSelected:  false,
-      imageFile: '66x66_Tomo.png'
-    },
-    {
-      accountType:  'Payee',
-      accountNumber:  '9999999990',
-      accountName:  'Sonia Cruz',
-      nickName: 'Sonia',
-      amountBal: '1234.56',
-      isSelected:  false,
-      imageFile: '66x66_Sonia.png'
-    },
-    {
-      accountType:  'Payee',
-      accountNumber:  '1357986420',
-      accountName:  'Kiran Singh',
-      nickName: 'Kiran',
-      amountBal: '98.76',
-      isSelected:  false,
-      imageFile: '66x66_Kiran.png'
-    },
-    {
-      accountType:  'Payee',
-      accountNumber:  '1357986420',
-      accountName:  'Imogen Lutz',
-      nickName: 'Imogen',
-      amountBal: '6264.69',
-      isSelected:  false,
-      imageFile: '66x66_Imogen.png'
-    }
-  ];
-
-  toMockSearchAccountChoices: MockToAccountsModel[] = [
-    {
-      accountType: 'Payee',
-      accountNumber: '1357986420',
-      accountName: 'Gavin Johnson',
-      nickName: 'Gavin',
-      amountBal: '1498.22',
-      isSelected: false,
-      imageFile: 'gavin-62x62.png'
-    },
-    {
-      accountType: 'Payee',
-      accountNumber: '1357986420',
-      accountName: 'Gas Co.',
-      nickName: 'Gas Co.',
-      amountBal: '98.76',
-      isSelected: false,
-      imageFile: 'gas_co_64x63.png'
-    }
-  ];
+  mockRecentPayeeChoices: MockToAccountsModel[];
+  toMockSearchAccountChoices: MockToAccountsModel[];
 
   payeeImageBaseURL: String = '../../assets/';
   tempFakeChoice;
-  amountInputFocussed: Boolean;
+  searchNameInputFocussed: Boolean;
   showMockSearchDiv: Boolean = false;
 
   constructor(
@@ -86,7 +29,9 @@ export class PayeePageComponent implements OnInit {
 
   ngOnInit() {
     this.getToAccountsInfo();
-    this.amountInputFocussed = false;
+    this.searchNameInputFocussed = false;
+    this.mockRecentPayeeChoices = this.toAccountChoices.slice(0, 4);
+    this.toMockSearchAccountChoices =  this.toAccountChoices.slice(-2);
   }
   getToAccountsInfo(): void {
     this.service
@@ -97,6 +42,7 @@ export class PayeePageComponent implements OnInit {
   }
   onSelectToAccount(toAccount: MockToAccountsModel): void {
     toAccount.isSelected = true;
+    console.log(' options: ', this.toAccountChoices);
     // set the isSelected attribute on other choices as false
     this.service.setAppModel('toAccount', toAccount);
     this.router.navigate(['/enter-amount']);
@@ -107,8 +53,8 @@ export class PayeePageComponent implements OnInit {
     this.service.setAppModel('toAccount', toAccount);
     this.router.navigate(['/enter-amount']);
   }
-  onAmountInputFocus(): void {
-    this.amountInputFocussed = true;
+  onSearchNameInputFocus(): void {
+    this.searchNameInputFocussed = true;
   }
   onInputValueChanged(event: any) {
     if (event.target.value.toLowerCase() === 'ga') {

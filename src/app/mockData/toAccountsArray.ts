@@ -8,7 +8,8 @@ export const MOCK_TO_ACCOUNTS_ARRAY:  MockToAccountsModel[] = [
     nickName: 'Tomo',
     amountBal: '214.59',
     isSelected:  false,
-    imageFile: '66x66_Tomo.png'
+    imageFile: '66x66_Tomo.png',
+    currencyIndicator: 'USD'
   },
   {
     accountType:  'Payee',
@@ -17,7 +18,8 @@ export const MOCK_TO_ACCOUNTS_ARRAY:  MockToAccountsModel[] = [
     nickName: 'Sonia',
     amountBal: '1234.56',
     isSelected:  false,
-    imageFile: '66x66_Sonia.png'
+    imageFile: '66x66_Sonia.png',
+    currencyIndicator: 'USD'
   },
   {
     accountType:  'Payee',
@@ -26,7 +28,8 @@ export const MOCK_TO_ACCOUNTS_ARRAY:  MockToAccountsModel[] = [
     nickName: 'Kiran',
     amountBal: '98.76',
     isSelected:  false,
-    imageFile: '66x66_Kiran.png'
+    imageFile: '66x66_Kiran.png',
+    currencyIndicator: 'USD'
   },
   {
     accountType:  'Payee',
@@ -35,7 +38,8 @@ export const MOCK_TO_ACCOUNTS_ARRAY:  MockToAccountsModel[] = [
     nickName: 'Imogen',
     amountBal: '6264.69',
     isSelected:  false,
-    imageFile: '66x66_Imogen.png'
+    imageFile: '66x66_Imogen.png',
+    currencyIndicator: 'USD'
   },
   {
     accountType:  'Payee',
@@ -44,7 +48,8 @@ export const MOCK_TO_ACCOUNTS_ARRAY:  MockToAccountsModel[] = [
     nickName: 'Theo',
     amountBal: '33214.99',
     isSelected:  false,
-    imageFile: '66x66_Aaron.png'
+    imageFile: '66x66_Aaron.png',
+    currencyIndicator: 'USD'
   },
   {
     accountType:  'Payee',
@@ -53,7 +58,8 @@ export const MOCK_TO_ACCOUNTS_ARRAY:  MockToAccountsModel[] = [
     nickName: 'Gas Co.',
     amountBal: '98.76',
     isSelected:  false,
-    imageFile: 'gas_co_64x63.png'
+    imageFile: 'gas_co_64x63.png',
+    currencyIndicator: 'USD'
   },
   {
     accountType:  'Payee',
@@ -62,6 +68,7 @@ export const MOCK_TO_ACCOUNTS_ARRAY:  MockToAccountsModel[] = [
     nickName: 'Gavin',
     amountBal: '1498.22',
     isSelected:  false,
-    imageFile: 'gavin-62x62.png'
+    imageFile: 'gavin-62x62.png',
+    currencyIndicator: 'USD'
   }
 ];

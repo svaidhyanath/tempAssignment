@@ -3,6 +3,8 @@ import { MockFromAccountsModel } from '../models/mock-from-accounts-model';
 
 import { SharedAppServicesService } from '../services/shared-app-services.service';
 
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-enter-amount-and-review-component',
   templateUrl: './enter-amount-and-review-component.component.html',
@@ -20,11 +22,17 @@ export class EnterAmountAndReviewComponentComponent implements OnInit {
 
   payeeImageBaseURL: String = '../../assets/';
 
-  constructor(private service: SharedAppServicesService) {}
+  constructor(
+    private service: SharedAppServicesService,
+    private router: Router
+    ) {}
 
   ngOnInit() {
     this.getFromAccountsInfo();
     this.applicationModel = this.service.getAppModel();
+    if (typeof this.applicationModel.toAccount !== 'object') {
+      this.router.navigate(['/payee-list']);
+    }
   }
 
   getFromAccountsInfo(): void {

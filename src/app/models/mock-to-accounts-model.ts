@@ -6,4 +6,5 @@ export class MockToAccountsModel  {
   amountBal: String;
   imageFile: String;
   nickName: String;
+  currencyIndicator: String;
 }
