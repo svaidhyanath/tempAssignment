@@ -13,7 +13,7 @@ import { Router } from '@angular/router';
 export class EnterAmountAndReviewComponentComponent implements OnInit {
   fromAccountChoices: MockFromAccountsModel[];
 
-  @Input()
+  /* @Input() */
   enteredAmountValue: String;
 
   amountVal: String;
@@ -22,25 +22,23 @@ export class EnterAmountAndReviewComponentComponent implements OnInit {
 
   payeeImageBaseURL: String = '../../assets/';
 
+  amountToShowArr: Array<any> = [0, '.', 0, 0];
+
+  currencyIndicator: String;
+
   constructor(
     private service: SharedAppServicesService,
     private router: Router
     ) {}
 
   ngOnInit() {
-    this.getFromAccountsInfo();
     this.applicationModel = this.service.getAppModel();
     if (typeof this.applicationModel.toAccount !== 'object') {
       this.router.navigate(['/payee-list']);
     }
-  }
+    this.currencyIndicator =  this.applicationModel.toAccount.currencyIndicator;
+    this.enteredAmountValue = this.amountToShowArr.join('');
 
-  getFromAccountsInfo(): void {
-    this.service
-      .getFromAccountsOfUser()
-      .subscribe(
-        fromAccountChoices => (this.fromAccountChoices = fromAccountChoices)
-      );
   }
 
   onSelectFromAccount(fromAccount: MockFromAccountsModel): void {
@@ -53,6 +51,10 @@ export class EnterAmountAndReviewComponentComponent implements OnInit {
     console.log(event);
     this.amountVal = parseFloat(event).toFixed(2);
     this.service.setAppModel('enteredAmount', this.amountVal);
-    return this.amountVal;
+    return event;
+  }
+
+  onNumpadKeyClick(keyClicked: String) {
+    console.log(keyClicked);
   }
 }

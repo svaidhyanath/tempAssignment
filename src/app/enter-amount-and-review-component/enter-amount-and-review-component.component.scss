@@ -1,22 +1,21 @@
-
-.first-main-div{
+.first-main-div {
   background-color: black;
 }
-.div-one{
+.div-one {
   text-align: center;
   margin-left: -12%;
   padding: 15px;
 }
-.heading{
+.heading {
   color: white;
   width: max-content;
-  font-family:  'Overpass', 'Interstate', sans-serif;
+  font-family: "Overpass", "Interstate", sans-serif;
 }
-a{
-    color: white;
-    text-decoration: none;
-    background-color: transparent;
-    font-family:  'Overpass', 'Interstate', sans-serif;
+a {
+  color: white;
+  text-decoration: none;
+  background-color: transparent;
+  font-family: "Overpass", "Interstate", sans-serif;
 }
 .avatar {
   width: 70px;
@@ -25,17 +24,18 @@ a{
   margin: 0 auto;
   display: block;
 }
-.avatar-text{
+.avatar-text {
   color: white;
   margin: 0 auto;
- text-align: center;
-  font-family:  'Overpass', 'Interstate', sans-serif;
+  text-align: center;
+  font-family: "Overpass", "Interstate", sans-serif;
 }
-.main-div{
+.main-div {
   margin-top: -5%;
 }
-.input-group>.custom-select:not(:first-child), .input-group>.form-control:not(:first-child) {
- margin-right: 5%;
+.input-group > .custom-select:not(:first-child),
+.input-group > .form-control:not(:first-child) {
+  margin-right: 5%;
 }
 .no-border {
   font-size: 35px;
@@ -48,35 +48,52 @@ a{
   background-color: black;
   box-shadow: none;
 }
-.second-container{
+.second-container {
   background-color: white;
   min-height: 550px;
 }
-.second-container-text{
-  margin:0 auto;
+.second-container-text {
+  margin: 15px auto;
   text-align: center;
-  font-family: 'Overpass', 'Interstate', sans-serif;
-  font-size: 15px;
-  color: #A5A5A5;
-  margin-top: 10px;
-  letter-spacing: 0;
+  font-family: "Overpass", "Interstate", sans-serif;
+  font-size: 16px;
+  color: #a5a5a5;
+  letter-spacing: 0.3;
 }
-.bank-icons{
+.bank-icons {
   height: 40px;
   width: 40px;
 }
-.optradio{
-margin-left: 45%;
-height: 32px;
-width: 32px;
-margin-top: -3%;
+.optradio {
+  margin-left: 45%;
+  height: 32px;
+  width: 32px;
+  margin-top: -3%;
 }
-.btn{
+.btn {
   background-color: #b5985a;
-      width: 327px;
-    height: 56px;
+  width: 327px;
+  height: 56px;
 }
-@media (max-width: 500px){
+.numPadKey {
+  background: rgba(210, 210, 210, 0.4);
+  height: 25%;
+  width: 33.3%;
+  float: left;
+  border: 1px rgba(3, 3, 3, 0.3);
+  border-style: groove;
+  padding: 7px;
+  font-size: 35px;
+  text-align: center;
+  font-family: "Overpass", "Interstate", sans-serif;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+.numPadKey:active {
+  background: rgba(110, 110, 110, 0.3);
+  box-shadow: 1px 1px 3px 3px rgba(60, 60, 60, 0.5);
+}
+@media (max-width: 500px) {
   // .div-one{
   //   margin-left: -25%;
   //   margin-right: -20%;
