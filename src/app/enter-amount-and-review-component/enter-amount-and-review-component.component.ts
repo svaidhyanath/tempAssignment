@@ -1,9 +1,11 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MockFromAccountsModel } from '../models/mock-from-accounts-model';
 
 import { SharedAppServicesService } from '../services/shared-app-services.service';
 
 import { Router } from '@angular/router';
+
+import {CURRENCY_SYMBOLS} from '../constants-folder/currencyConstants';
 
 @Component({
   selector: 'app-enter-amount-and-review-component',
@@ -11,20 +13,24 @@ import { Router } from '@angular/router';
   styleUrls: ['./enter-amount-and-review-component.component.scss']
 })
 export class EnterAmountAndReviewComponentComponent implements OnInit {
-  fromAccountChoices: MockFromAccountsModel[];
-
-  /* @Input() */
-  enteredAmountValue: String;
-
-  amountVal: String;
-
-  applicationModel;
 
   payeeImageBaseURL: String = '../../assets/';
 
-  amountToShowArr: Array<any> = [0, '.', 0, 0];
+  initAmountToShowArr: Array<any> = [0, 0, 0];
 
-  currencyIndicator: String;
+  finalAmountToShowArr: Array<any>;
+
+  currencySymbols = CURRENCY_SYMBOLS;
+
+  currencyIndicator: string;
+
+  currencySymbolToShow: String;
+
+  applicationModel;
+
+  enteredAmountValue: String;
+
+  keypadClickedNumbersArray: Array<Number> = [];
 
   constructor(
     private service: SharedAppServicesService,
@@ -37,24 +43,36 @@ export class EnterAmountAndReviewComponentComponent implements OnInit {
       this.router.navigate(['/payee-list']);
     }
     this.currencyIndicator =  this.applicationModel.toAccount.currencyIndicator;
-    this.enteredAmountValue = this.amountToShowArr.join('');
+    this.currencySymbolToShow = this.currencySymbols[this.currencyIndicator];
+    this.enteredAmountValue = this.buildAmountValueToShow(this.initAmountToShowArr, this.keypadClickedNumbersArray);
 
-  }
-
-  onSelectFromAccount(fromAccount: MockFromAccountsModel): void {
-    fromAccount.isSelected = true;
-    // set the isSelected attribute on other choices as false
-    this.service.setAppModel('fromAccount', fromAccount);
-  }
-
-  onInputValueChanged(event: any) {
-    console.log(event);
-    this.amountVal = parseFloat(event).toFixed(2);
-    this.service.setAppModel('enteredAmount', this.amountVal);
-    return event;
   }
 
   onNumpadKeyClick(keyClicked: String) {
-    console.log(keyClicked);
+    if ( keyClicked === 'b' ) {
+      this.keypadClickedNumbersArray.pop();
+    } else {
+      if (keyClicked === '.') {
+        this.keypadClickedNumbersArray.push(0, 0);
+      } else {
+        this.keypadClickedNumbersArray.push(Number(keyClicked));
+      }
+    }
+    this.enteredAmountValue = this.buildAmountValueToShow(this.initAmountToShowArr, this.keypadClickedNumbersArray);
+  }
+
+  buildAmountValueToShow(arrToWorkWith: Array<any>, enteredNumbersArray: Array<any>) {
+    if ( enteredNumbersArray.length < 4 ) {
+      this.finalAmountToShowArr = arrToWorkWith.concat(enteredNumbersArray).slice(enteredNumbersArray.length);
+    } else {
+      this.finalAmountToShowArr = [].concat(enteredNumbersArray);
+    }
+    this.finalAmountToShowArr.splice(this.finalAmountToShowArr.length - 2, 0, '.');
+    return this.finalAmountToShowArr.join('');
+  }
+
+  onNextBtnClick() {
+    this.service.setAppModel('enteredAmount', this.enteredAmountValue);
+    this.router.navigate(['/from-account']);
   }
 }

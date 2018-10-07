@@ -9,7 +9,7 @@ export const MOCK_TO_ACCOUNTS_ARRAY:  MockToAccountsModel[] = [
     amountBal: '214.59',
     isSelected:  false,
     imageFile: '66x66_Tomo.png',
-    currencyIndicator: 'USD'
+    currencyIndicator: 'YEN'
   },
   {
     accountType:  'Payee',
@@ -29,7 +29,7 @@ export const MOCK_TO_ACCOUNTS_ARRAY:  MockToAccountsModel[] = [
     amountBal: '98.76',
     isSelected:  false,
     imageFile: '66x66_Kiran.png',
-    currencyIndicator: 'USD'
+    currencyIndicator: 'INR'
   },
   {
     accountType:  'Payee',
@@ -39,7 +39,7 @@ export const MOCK_TO_ACCOUNTS_ARRAY:  MockToAccountsModel[] = [
     amountBal: '6264.69',
     isSelected:  false,
     imageFile: '66x66_Imogen.png',
-    currencyIndicator: 'USD'
+    currencyIndicator: 'EUR'
   },
   {
     accountType:  'Payee',

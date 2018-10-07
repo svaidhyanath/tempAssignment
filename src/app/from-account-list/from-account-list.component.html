@@ -27,7 +27,7 @@
         <div class="col">
           <div class="input-group mb-3" style="height:70px;">
             <div style="font-family: 'Overpass', 'Interstate', sans-serif; height:70px; " class="form-control no-border">
-              ${{applicationModel.enteredAmount}}
+              <span [innerHTML]="this.currencySymbolToShow"></span>{{applicationModel.enteredAmount}}
             </div>
           </div>
         </div>

@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 import {SharedAppServicesService} from '../services/shared-app-services.service';
 
+import {CURRENCY_SYMBOLS} from '../constants-folder/currencyConstants';
+
 @Component({
   selector: 'app-review',
   templateUrl: './review.component.html',
@@ -14,6 +16,12 @@ export class ReviewComponent implements OnInit {
   todaysDateString;
   payeeImageBaseURL: String = '../../assets/';
 
+  currencySymbols = CURRENCY_SYMBOLS;
+
+  currencyIndicator: string;
+
+  currencySymbolToShow: String;
+
   constructor(private service: SharedAppServicesService) { }
 
   ngOnInit() {
@@ -22,6 +30,8 @@ export class ReviewComponent implements OnInit {
     + '/' + this.todaysDateObj.getDate()
     + '/' + this.todaysDateObj.getFullYear();
     this.applicationModel = this.service.getAppModel();
+    this.currencyIndicator =  this.applicationModel.toAccount.currencyIndicator;
+    this.currencySymbolToShow = this.currencySymbols[this.currencyIndicator];
   }
 
 }

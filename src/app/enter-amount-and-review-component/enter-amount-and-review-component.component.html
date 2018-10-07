@@ -32,7 +32,7 @@
             <div style="height:70px; position:absolute; top:0; left:0; width:100%;
              font-family: 'Overpass', 'Interstate', sans-serif;
              padding: 17px 0; line-height: 44px;"
-              class="no-border">{{this.enteredAmountValue}}</div>
+              class="no-border"><span [innerHTML]="this.currencySymbolToShow"></span>{{this.enteredAmountValue}}</div>
           </div>
         </div>
       </div>
@@ -47,29 +47,27 @@
     </div>
   </div>
   <div class="keypad" style=" width:100%; height: 260px;">
-    <div class="numPadKey" (click)="onNumpadKeyClick('1')" >1</div>
-    <div class="numPadKey" (click)="onNumpadKeyClick('2')" >2</div>
-    <div class="numPadKey" (click)="onNumpadKeyClick('3')" >3</div>
-    <div class="numPadKey" (click)="onNumpadKeyClick('4')" >4</div>
-    <div class="numPadKey" (click)="onNumpadKeyClick('5')" >5</div>
-    <div class="numPadKey" (click)="onNumpadKeyClick('6')" >6</div>
-    <div class="numPadKey" (click)="onNumpadKeyClick('7')" >7</div>
-    <div class="numPadKey" (click)="onNumpadKeyClick('8')" >8</div>
-    <div class="numPadKey" (click)="onNumpadKeyClick('9')" >9</div>
-    <div class="numPadKey" (click)="onNumpadKeyClick('.')" >.</div>
-    <div class="numPadKey" (click)="onNumpadKeyClick('0')" >0</div>
-    <div class="numPadKey" (click)="onNumpadKeyClick('b')" ><i class="fas fa-backspace"></i></div>
+    <div class="numPadKey" (click)="onNumpadKeyClick('1')">1</div>
+    <div class="numPadKey" (click)="onNumpadKeyClick('2')">2</div>
+    <div class="numPadKey" (click)="onNumpadKeyClick('3')">3</div>
+    <div class="numPadKey" (click)="onNumpadKeyClick('4')">4</div>
+    <div class="numPadKey" (click)="onNumpadKeyClick('5')">5</div>
+    <div class="numPadKey" (click)="onNumpadKeyClick('6')">6</div>
+    <div class="numPadKey" (click)="onNumpadKeyClick('7')">7</div>
+    <div class="numPadKey" (click)="onNumpadKeyClick('8')">8</div>
+    <div class="numPadKey" (click)="onNumpadKeyClick('9')">9</div>
+    <div class="numPadKey" (click)="onNumpadKeyClick('.')">.00</div>
+    <div class="numPadKey" (click)="onNumpadKeyClick('0')">0</div>
+    <div class="numPadKey" (click)="onNumpadKeyClick('b')"><i class="fas fa-backspace"></i></div>
   </div>
   <br>
   <div class="row">
     <div class="col">
-      <a routerLink="/from-account" style="display: block; margin: 0 auto;">
-        <button type="button" class="btn btn-default" style="margin: 0 auto;
-        display: inherit;"><span style="font-family:'Interstate', 'Overpass',  sans-serif;
-          font-size: 18px;
-          color: #FFFFFF;
-          text-align: center;">
-            Next</span></button></a>
+      <button type="button" class="btn btn-default" style="margin: 0 auto;display: inherit;" (click)="onNextBtnClick()">
+        <span style="font-family:'Interstate', 'Overpass',  sans-serif; font-size: 18px; color: #FFFFFF; text-align: center;">
+          Next
+        </span>
+      </button>
     </div>
   </div>
 </div>

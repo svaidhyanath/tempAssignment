@@ -12,7 +12,7 @@
       <div class="row check-margin-number">
         <div class="col">
           <p style="font-family: 'Interstate', 'Overpass', sans-serif; font-size: 50px; color: #FFF;
-          letter-spacing: 0.06px; text-align: center;">${{applicationModel.enteredAmount}}</p>
+          letter-spacing: 0.06px; text-align: center;"><span [innerHTML]="this.currencySymbolToShow"></span>{{applicationModel.enteredAmount}}</p>
         </div>
       </div>
       <div class="row check-margin-text">
